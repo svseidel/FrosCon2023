@@ -1,0 +1,553 @@
+= IT-Sicherheitsrichtlinie Recplast GmbH
+// und Privatnutzungsvereinbarung für die Nutzung von Firmen-Geräten
+:sectnums:
+:asciidoc-version: 2.0.20 [https://asciidoctor.org]
+:author: RMF 
+:email: it-support@rmf.berlin
+:author: RMF 
+// :source-highlighter: rouge
+:lang: de
+:icons: font
+:doctype: article
+// :docstatus: In Bearbeitung
+:docstatus: Aktiv
+// :docstatus: Archiviert (inaktiv)
+// :docstatus: adoc-Vorlage
+:asciidoc-file: 90-10_IT-Sicherheitsrichtlinie.adoc
+:docdate: 10.03.2021
+:revnumber: 1.0
+:revdate: {localdate}
+:revremark: Entwurf zur Prüfung an GF
+:last-update-label: zuletzt geändert: 16.03.2021
+:table-caption: Tabelle
+:toc-title: Inhalt
+:toc:
+:toclevels: 3
+
+
+
+// übersetzen mit
+// asciidoctor-pdf -a pdf-themesdir=../../resources/themes -a pdf-theme=Recplast -a pdf-fontsdir=../../resources/fonts 90-10_IT-Sicherheitsrichtlinie.adoc
+
+
+
+
+== Ziel dieser Richtlinie
+// tag::main[]
+
+Ziel dieser Richtlinie ist es, Sie als Mitarbeiterin der Recplast GmbH für (fiktive Beispielfirma BSI) (im Folgenden Recplast GmbH) für das Thema Sicherheit in der Informationstechnologie (IT) zu sensibilisieren.
+
+Gleichzeitig wollen wir die störungsfreie und sichere Nutzung der IT-Infrastruktur gewährleisten. Ohne Telefon- und E-Mail-Verbindung sind wir für Jugendämter, Vormünder, Eltern und Angehörige nicht erreichbar; ohne eine Online-Verbindung lassen sich gesetzliche Pflichten wie z.B. die Umsatzsteueranmeldung nicht mehr erfüllen. 
+
+Ein Ausfall nur eines Teils der IT-Anlagen oder ein fahrlässiges Handeln würde neben Image-Schäden auch massive finanzielle Einbußen – bis hin zur Existenzgefährdung – mit sich bringen.
+
+Sicherheitsvorfälle bei der IT-Nutzung können durch fremde Dritte, aber auch durch unsachgemäßes Verhalten eigener Nutzer hervorgerufen werden. Viele Fehler entstehen direkt im Unternehmen, daher soll diese Richtlinie zur Verbesserung der IT-Sicherheitskenntnisse und der Erhöhung der Eigenverantwortung einer jeden Mitarbeiterin dienen.
+
+Sicherheit und Datenschutz sind uns besonders wichtig.
+
+Auch Sie können an Ihrem Arbeitsplatz zur Sicherheit der IT- Infrastruktur beitragen, indem Sie diese Richtlinie lesen, beherzigen und Ihre Kolleginnen anhalten, dies ebenfalls zu tun.
+
+Dieses Dokument erklärt, warum verschiedene Maßnahmen wichtig und notwendig sind und welche Gefahren bei Vernachlässigung drohen. Zudem erfahren Sie, wie Sie sich und die Recplast GmbH während der Arbeit vor Gefahren schützen. Dafür werden Regeln für den täglichen Gebrauch konkretisiert und Tipps für die Praxis gegeben.
+
+ 
+
+Aus Gründen der Lesbarkeit ist in dieser Richtlinie stets die weibliche Form gewählt, dabei ist die männliche Form stets mitgemeint.
+
+ 
+=== Geltungsbereich
+
+Der Geltungsbereich dieser Regelungen ist wie folgt festgelegt:
+
+* Persönlich: für alle Mitarbeiterinnen der Recplast GmbH, die in den Räumen des Unternehmens oder mit deren IT- und/oder Kommunikationssystemen und/oder über deren Netze arbeiten;
+    
+* Funktional: für alle Komponenten und Datenverarbeitungs- sowie Telekommunikationsanlagen, sowie für alle Daten – unabhängig vom Speichermedium – im Besitz des Unternehmens.
+
+Die Anwendung dieser Richtlinie ist verpflichtend. Verstößt eine Mitarbeiterin gegen diese Richtlinie, drohen ihr arbeitsrechtliche und strafrechtliche Konsequenzen. Die jeweils gültige Version dieser Richtlinie ist in den Unterlagen in jeder Filiale und im Büro in Musterort zu finden. Eine Abweichung von dieser Richtlinie bedarf einer von der Geschäftsleitung erteilte explizite Ausnahmegenehmigungen für den besonderen Einzelfall.
+
+ 
+=== Sicherheitsorganisation
+
+Verantwortlich für die Sicherheitsorganisation ist die Geschäftsführung. Sie hat einen IT-Sicherheitsbeauftragten ernannt.
+
+ 
+=== Weisungen
+
+Sofern Ihnen eine Weisung fragwürdig  oder unzulässig oder gar illegal vorkommt, ist unverzügliche die jeweilige Fachvorgesetzte zu informieren. Diese entscheidet über weitere Schritte und über die Durchführen der Weisung. Sofern das nicht möglich ist oder nicht zielführend erscheint, weil z.B. die Weisung vom Vorgesetzten kam, kann er sich an den Datenschutzbeauftragten und/oder IT Sicherheitsbeauftragten wenden.
+
+Der IT-Service wird Mitarbeiterinnen niemals nach einem persönlichen Passwort fragen.
+
+ 
+=== Meldepflicht
+
+Bemerkt eine Mitarbeiterin einen Verstoß gegen diese Regelungen, eine gesetzliche Regelung oder eine anderweitige Gefährdung der IT-Sicherheit, der Datensicherheit, des Datenschutzes oder der Interessen des Unternehmens, so hat sie dies unverzüglich der Geschäftsleitung oder dem Datenschutzbeauftragten zu melden. 
+
+ 
+=== Schutzbedarf und rechtlicher Rahmen
+
+Vertrauliche Unterlagen sind alle Träger von Informationen, durch die eine betriebsfremde Person Einblick in die Abläufe und Arbeitsprozesse der Recplast GmbH erlangen kann. Dabei ist es unerheblich, ob diese Unterlagen in digitaler Form als Datei oder auf Papier vorliegen.
+
+Vertrauliche Unterlagen sind zum Beispiel:
+
+* Alle personenbezogenen Daten, d.h. alle Einzelangaben über persönliche oder sachliche Verhältnisse einer bestimmten oder bestimmbaren natürlichen Person – also Kinder, Jugendliche, junge Erwachsene, Eltern, Angehörige, Vormünder, Mitarbeiterinnen von Jugendämtern, Gerichten, Gutachterinnen usw.,
+
+* Interne Verfahrensanweisungen, Strategiepapiere, Präsentationen, Rundschreiben
+* Passwörter und andere Zugangsdaten, PINs, Personal- oder sonstige Identitätsnummern,
+* Budget-, Mengen-, Kosten-Plan- und IST-Zahlen, Kalkulationen
+* Post-/E-Mail-Adressen, Telefonnummern, Urlaubsdaten, Bewerber-Unterlagen
+* Verträge, Konditionen oder Korrespondenz mit Ämtern, Lieferanten, Dienstleistern oder Handwerkern 
+* Verfahren und Prozessbeschreibungen, 
+    
+
+Es ist zu beachten, dass für Außenstehende – insbesondere für Wettbewerber – vieles interessant sein kann – nicht nur das, was wir selbst als vertraulich einstufen würden.
+
+Betriebs- und Geschäftsgeheimnisse sind Umstände oder Vorgänge, die nur einem begrenzten Personenkreis im Unternehmen bekannt, für Außenstehende aber wissenswert sind und die nach expliziten oder impliziten Regeln des Unternehmens geheim zu halten sind, weil ihre Kenntnis durch Außenstehende dem Unternehmen schaden kann.
+
+Wir haben es manchmal mit hoch aggressiven Personen zu tun, die eine Gefahr für Kinder, Jugendliche, andere Elternteile insbesondere Frauen/Mütter und Mitarbeiterinnen sein können. Auch hier könnten unvorsichtige Informationen dazu führen, dass eine Gefährdungslage verschlimmert wird.
+
+ 
+=== Strafbare Handlungen
+
+Es wird darauf hingewiesen, dass Strafvorschriften existieren hinsichtlich
+
+* (der Vorbereitung) des Ausspähens oder Abfangens von Daten nach § 202 ff StGB
+* des Verrats von Betriebs- uns Geschäftsgeheimnissen; § 204 StGB i.V.m. §17 UWG
+* des Abhörens nach § 201 StGB i.V. m. §§ 88, 90 TKG oder § 206 StGB
+* der Manipulation oder Unterdrückung von Daten nach § 267 ff StGB
+* Datenveränderung und Computersabotage nach § 303a ff StGB
+* der Störung von Telekommunikationsanlagen nach § 317 StGB
+* und vor allem hinsichtlich der Verpflichtung auf die Wahrung der Vertraulichkeit und Verschwiegenheit gem. § 203 Strafgesetzbuch (StGB)
+
+=== Verpflichtungserklärung auf Vertraulichkeit und Verschwiegenheit
+
+[.text-right]
+[.small]#40-01_verpflichtung_vertraulichkeit.pdf#
+
+Sie werden noch einmal ausdrücklich auf die von Ihnen unterschriebene Verpflichtungserklärung auf Vertraulichkeit und Verschwiegenheit hingewiesen (Siehe 40-01_verpflichtung_vertraulichkeit.pdf).
+// footnote:[Siehe Dokument: 40-01_verpflichtung_vertraulichkeit.pdf] 
+
+Es ist Ihnen untersagt, personenbezogene Daten unbefugt oder unrechtmäßig zu verarbeiten. Darüber hinaus werden Sie auf Folgendes hingewiesen:
+
+. Es ist Ihnen untersagt absichtlich oder unabsichtlich die Sicherheit der Verarbeitung in einer Weise zu verletzen, die zur Vernichtung, zum Verlust, zur Veränderung, zur unbefugter Offenlegung oder unbefugtem Zugang führt.
+
+. Personenbezogene Daten dürfen nur verarbeitet werden, wenn eine Einwilligung bzw. eine gesetzliche Regelung die Verarbeitung erlauben oder eine Verarbeitung dieser Daten vorgeschrieben ist und die Grundsätze der Verarbeitung eingehalten werden.
+
+. Verstöße gegen die Datenschutzvorschriften können ggf. mit Geldbuße, Geldstrafe oder Freiheitsstrafe geahndet werden. Entsteht der betroffenen Person durch die unzulässige Verarbeitung ihrer personenbezogenen Daten ein materieller oder immaterieller Schaden, kann ein Schadenersatzanspruch entstehen.
+
+. Ein Verstoß gegen die Vertraulichkeits- und Datenschutzvorschriften stellt einen Verstoß gegen arbeitsvertragliche Pflichten dar, der entsprechend geahndet werden kann.
+
+. Diese Pflichten bestehen auch nach Beendigung Ihrer Tätigkeit bei der Recplast GmbH fort.
+
+ 
+=== IT-Infrastruktur
+
+Die Infrastruktur muss mit angemessener Sorgfalt vor Verlust, Beschädigung, übermäßiger Abnutzung oder Missbrauch geschützt werden. IT Ressourcen (PCs, Notebooks, Drucker u.a.) sind Eigentum des Unternehmens und werden den Mitarbeitern grundsätzlich nur zur Erfüllung ihrer geschäftlichen Tätigkeit zur Verfügung gestellt.
+
+ 
+
+Eine private Nutzung der dienstlichen IT-Infrastruktur ist – auch in den Pausen – untersagt. Abweichend davon kann die Geschäftsleitung – ohne Anspruch auf Verfügbarkeit und unter dem Vorbehalt jederzeitigen Widerrufs – die private Nutzung erlauben, wenn die Mitarbeiterin schriftlich einwilligt, dass das Unternehmen im Rahmen der Richtlinienkontrolle sowie der Erhaltung der IT-Sicherheit auch die privaten Kommunikationsdaten der Mitarbeiterin erheben, verarbeiten und nutzen darf. Die diesbezügliche IT-Privatnutzungsvereinbarung kann weitere Regeln hinsichtlich der Nutzung beinhalten (z.B. Verbot rechtswidriger oder erotischer Inhalte).
+
+ 
+=== Nutzung privater Hard- und Software
+
+Der Einsatz privater Hard- oder Software zu dienstlichen Zwecken ist aus Gründen der Haftung, Risikominimierung und aus versicherungs- und lizenz-/urheberrechtlichen Gründen untersagt.
+
+Private Mobiltelefone / Smartphones und/oder (Tablet-)PCs oder andere elektronische Geräte oder (USB-)Gadgets dürfen nur bei Notwendigkeit mit in den Betrieb gebracht werden. Sie sind eigenverantwortlich während der Arbeitszeit unter Verschluss zu halten. Sie sind ausgeschaltet bzw. im lautlosen Modus zu verwahren. Das Unternehmen haftet nicht für Verlust oder Beschädigung der privaten Geräte.
+
+Insbesondere dürfen private Geräte
+
+* nicht mit der dienstlichen IT-Netzinfrastruktur verbunden werden oder
+* für die Speicherung / Verarbeitung dienstlicher Informationen verwendet werden. Die Speicherung von Namen, Adressen, Telefonnummern usw. von Betroffenen auf privaten Geräten ist untersagt.
+
+Ebenso dürfen private Geräte nicht mit einem Computer oder Server des Unternehmens verbunden werden.
+
+Die Geschäftsleitung kann in begründeten Einzelfällen und bei vorheriger Anfrage Ausnahmen von den Regeln erlauben. In diesem Fall sind Sicherheitsaspekte für geschäftlich genutzte private Endgeräte entsprechend zu regeln.
+
+
+=== Benutzung des Firmennetzwerkes
+
+Die Nutzung des Firmennetzes ist nur für dienstliche Zwecke gestattet. Die Nutzung des Firmennetzes für den Austausch privater Daten und Dateien ist untersagt. Zum Firmennetz gehören 
+
+* alle Fritz!Box-Router,
+* die Notebooks für die pädagogischen Fachkräfte,
+* die Drucker, Kopierer, Scanner, Faxgeräte in den Filialen
+* alle IT-Geräte im Büro in Musterort. 
+
+Für private Zwecke dürfen Verbindungen zum Internet nur über die Freifunk-Router erfolgen. 
+
+ 
+==== Internet-Zugang über das Firmennetzwerk
+
+Das Unternehmen protokolliert und speichert alle Zugriffe auf die Kommunikationssysteme und IP-/Webadressen. Protokolliert werden eingesetzte Software, Datum, Uhrzeit, Rechner- oder Benutzerkennung, Fehlercode, Anzahl der übertragenen Bytes, Zieladresse des angeforderten Dokuments und weitere technische Daten zur Analyse der IT-Infrastruktur. Die Daten werden automatisiert permanent oder durch einen damit beauftragten Mitarbeiter stichprobenweise auf Missbrauchsfälle auf pseudonymisierter – idealerweise sogar anonymer – Basis ausgewertet.
+
+In hinreichenden Verdachtsfällen kann das Nutzerverhalten einzelner Beschäftigter im Rahmen der datenschutzrechtlich zulässigen Grenzen durch technische Vorkehrungen auch direkt überwacht werden, um Verstöße gegen Vorschriften oder Straftaten nachweisen zu können.
+
+==== Nutzungsregeln im Fall privater Internetnutzung
+
+Die private Internetnutzung darf
+
+* nur außerhalb der Arbeitszeit (z.B. in Pausen) erfolgen,
+* Dritten keine betrieblichen Informationen gleich welcher Art zukommen lassen,
+* die eigene oder die Arbeit anderer Mitarbeiter nicht beeinträchtigen,
+* keine zusätzlichen Kosten verursachen
+
+ 
+==== Benutzung von Funknetzen / WLAN-Netzen
+
+Funknetze machen an Wänden und Mauern keinen Halt. Sie können auch von außen bzw. von Außenstehenden geräuschlos und möglicherweise unbemerkt genutzt werden.
+
+Daher sind hierfür besondere Regeln einzuhalten:
+
+Die Nutzung der WLAN-Zugänge (Access Points) im Firmennetz darf ausschließlich mit hierfür registrierter, firmeneigener Hardware erfolgen. Versuche, andere – insbesondere private – Endgeräte ins WLAN einzubinden, sind untersagt. Es wird darauf hingewiesen, dass Verbindungsversuche protokolliert werden können. 
+
+Der Verlust bzw. Diebstahl einer für den WLAN-Zugang vorkonfigurierten Hardware ist unverzüglich der Geschäftsleitung zu melden.
+
+Sofern für den Zugang zum Firmen-WLAN ein Passwort verwendet wird, ist dies streng geheim zu halten und darf nicht an Dritte weitergegeben werden. 
+// Das Passwort darf nicht in Schriftform aufbewahrt werden, schon gar nicht zusammen mit dem mobilen Gerät. 
+
+Unregelmäßigkeiten bei der Anmeldung oder Nutzung des WLANs sind den IT-Verantwortlichen unverzüglich zu melden, da dies ein Zeichen für einen Angriffsversuch sein kann. Sofern ein Zertifikatsfehler beim verschlüsselten Zugriff auf Server (z.B. Online-Banking, Web-Mail) angezeigt wird, darf die Nutzung unter keinen Umständen fortgesetzt werden.
+
+Die eigenmächtige Einrichtung zusätzlicher WLAN-Zugänge zur Verbesserung der Funknetzabdeckung bzw. des Datendurchsatzes ist untersagt. 
+// Für private Mobiltelefone steht je nach betrieblichen Möglichkeiten – ohne Gewährleistung einer Verfügbarkeit und unter dem Vorbehalt der jederzeitigen Widerrufbarkeit – ein Gäste-Netz zur Verfügung. Hierfür können gesonderte Nutzungsbedingungen gelten, die bei der Geschäftsleitung zu erfragen sind.
+
+Es dürfen keine öffentlich zugänglichen WLAN-Hotspots (Starbucks, Telekom, etc.) genutzt werden, um zusätzliche Sicherheitsrisiken zu vermeiden. 
+//Muss im Ausnahmefall eine Verbindung über öffentlich zugängliche WLAN-Hotspots hergestellt werden, so ist die Datenübertragung nach Anmeldung am WLAN (etwa durch Voucher-Code etc.) durch den Einsatz von VPN-Verbindungen vor Abhörangriffen zu schützen. Firmendaten wie etwa Emails dürfen erst dann über das öffentliche WLAN-Netze übertragen werden, wenn eine VPN-Verbindung aufgebaut ist. Das öffentliche WLAN-Netz ist nach der Nutzung aus den Profileinstellungen zu entfernen, um ein unbeabsichtigtes erneutes Verbinden des Gerätes mit dem Netz zu vermeiden.
+
+ 
+==== Fernzugriff auf das Unternehmensnetzwerk
+
+Zur Absicherung von Remote Access-Zugriffen auf das Firmennetzwerk wird eine verschlüsselte Verbindung vorausgesetzt und verwendet. Damit ist gewährleistet, dass auch vertrauliche und/oder personenbezogene Daten sicher übertragen werden. Folgende Regeln sind zu beachten:
+
+Fernverbindungen mit dem Firmennetzwerk dürfen nur über die vorhandenen, vom IT-Verantwortlichen eingerichteten Zugänge erfolgen.
+ 
+=== Nutzung des Arbeitsplatzrechners
+
+Auf den Arbeitsplatzrechnern darf nur die Software genutzt werden, die vom Unternehmen explizit freigegeben wurde und für die eine rechtmäßige Lizenz im Unternehmen existiert.
+
+Eigenmächtige Installation weiterer Software ohne vorhergehende Genehmigung ist untersagt. Insbesondere gilt dies für Software-Downloads aus dem Internet, wie z.B. für Public-Domain- und Shareware-Programme sowie Bildschirmschoner und Spiele. Auch Gratis-Dienste im Internet (wie Google-Docs, Dropbox, OneDrive, etc.) dürfen nicht genutzt werden. Das Anfertigen von Kopien der auf dem Rechner vorhandenen lizenzierten Software ist untersagt.
+
+ 
+==== Sperrung bei Abwesenheit / Herunterfahren bei Dienstschluss
+
+Bei Arbeitsende sind PCs/Notebooks herunterzufahren. Mobile Computer (Notebooks, Tablet-PCs) sind in verschlossenen Schränken zu verstauen. Bei kurzzeitigem Entfernen vom Arbeitsplatz ist der Computer zu sperren (Windows-Taste + »L« – oder Strg+Alt+Entf – Computer sperren).
+
+ 
+
+Jeder Mitarbeiter hat dafür Sorge zu tragen, dass auf seinen PCs eine automatische Sperrung nach 10 Minuten Stillstand erfolgt. Diese Sperrung kann wahlweise über die Windows-Sperrung oder über einen kennwortgeschützten Bildschirmschoner realisiert werden.
+
+ 
+==== Virenschutz und Sicherheits-Settings
+
+Computerviren sind Programme, die entwickelt werden, um unberechtigte Änderungen an Programmen und Daten vorzunehmen. Sie können deshalb Unternehmensressourcen und Datenbestände zerstören oder stehlen. Es ist daher untersagt, die installierten Virenschutzprogramme zu deaktivieren, oder zu deinstallieren; auch eine Änderung der Konfiguration der vorgegebenen Einstellungen ist untersagt.
+
+Sofern die Mitarbeiterin eine Beschädigung, ein Fehlverhalten oder unerklärliche Belastung des Computer-Systems feststellt, informiert sie umgehend der IT-Sicherheitsbeauftragten. Letzteres kann ein Indiz für eine Infektion durch Viren, Würmer oder andere Schadprogramme sein.
+
+Alle eigenmächtigen Änderungen an den Systemeinstellungen des Arbeitsplatzrechners oder Laptops, insbesondere den Sicherheitseinstellungen, sind untersagt. Das gilt auch für die Umgehung etwaiger Sperren und Zugangsbeschränkungen. Auf die §§ 202a–c StGB wird verwiesen.
+
+==== Kennwörter / Passwortschutz
+
+Die Anwender müssen bei der Auswahl und Benutzung von Passwörtern bewährte sichere Verfahren anwenden:
+
+* Passwörter dürfen gegenüber anderen Personen nicht offengelegt werden; dies gilt auch für Geschäftsführung oder Systemadministratoren
+* Passwörter dürfen nicht aufgeschrieben werden, außer der IT-verantwortliche hat hierfür eine sichere Methode zugelassen. Eine sichere Methode kann eine von der IT-Abteilung bereitgestellte oder freigegebene Passwort-Management-Software sein (s.u.).
+* Vom Anwender erstellte Passwörter dürfen auf keinem Weg verbreitet werden (mündlich, schriftlich oder in elektronischer Form, etc.). Ausgenommen davon sind Initialpassörter (temporäre Passwörter).
+* Passwörter müssen geändert werden, falls es Anzeichen dafür gibt, dass die Passwörter oder das System kompromittiert sein könnten – in diesem Fall muss ein Sicherheitsvorfall gemeldet werden
+* Sichere Passwörter müssen mindestens 3 der folgenden 4 Merkmale erfüllen:
+        ** Länge von mindestens acht (8) Zeichen
+        ** Benutzung mindestens einer Ziffer
+        ** enthält mindestens einen Großbuchstaben und einen Kleinbuchstaben
+        ** enthält mindestens ein Sonderzeichen
+
+Ferner zeichnet sich ein sicheres Passwort dadurch aus, dass
+
+* das Passwort nicht in einem Wörterbuch enthalten sein, kein Wort im Dialekt oder in der Umgangssprache irgendeiner Sprache oder irgendein solches Wort rückwärts geschrieben sein darf.
+* keine persönlichen Daten enthalten darf (z.B. Geburtsdatum, Adresse, Name von Familienmitgliedern, etc.)
+* es nicht den letzten drei verwendeten Passwörtern entspricht
+* es nicht auch für private Zwecke genutzt wird.
+// Passwörter müssen in folgender Frequenz geändert werden
+* Windows-Passwörter und Passwörter für den Office-Fileserver: nach Aufforderung durch die Geschäftsleitung in einem angemessenen Turnus
+* Passwörter für Web-Anwendungen sind vom Nutzer spätestens alle 365 Tage zu ändern
+
+=== Nutzung von mobilen Geräten
+
+Bereitgestellte mobile Geräte des Unternehmens wie Notebooks, PDAs, Smartphone, Tablets und ähnliche Geräte sind jederzeit sicher aufzubewahren. Dies gilt insbesondere bei externen Terminen und auf Reisen. Muss das Gerät in Ausnahmefällen für einige Zeit unbeaufsichtigt bleiben, so ist es gegen Diebstahl und unberechtigten Zugriff zu sichern. 
+// Bei Flugreisen sind mobile Geräte als Handgepäck zu führen. 
+Sofern ein mobiles Gerät ausnahmsweise in einem Fahrzeug verbleiben muss, so darf es von außen nicht sichtbar sein, sondern im Kofferraum eingeschlossen und ggf. abgedeckt werden.
+
+Mobile Geräte sind durch einen Zugangsschutz (PIN, Touch ID o.ä.) geschützt. Dieser Schutz darf nicht deaktiviert werden.
+
+Die ordnungsgemäße Nutzung von mobilen Geräten kann in einer Überlassungsvereinbarung näher geregelt werden und durch eine sog. »Mobile-Device-Management«-Software überwacht und durchgesetzt werden.
+
+ 
+=== Nutzung mobiler Datenträger
+
+Nicht von der Firma freigegebene oder von der Firma zur Verfügung gestellte externe Geräte ( d.h. private/fremde Geräte) wie z.B. USB-Sticks oder externe Massenspeicher (USB, eSATA; Firewire Handys, Powerbanks, etc.) dürfen nicht an den Arbeitsplatz-PC oder das dienstliche Notebook angeschlossen werden. 
+
+Eine Aufladung privater Geräte hat mittels Netzteilen an Steckdosen zu erfolgen, nicht jedoch am dienstlichen PC. Neben der Gefahr des Abflusses betrieblicher Daten besteht die Gefahr der Infektion mit Schadsoftware. Es wird darauf hingewiesen, dass die Nutzung der USB-Schnittstellen durch Monitoring-Programme überwacht werden kann, um dem Risiko eines Datenabflusses zu begegnen.
+
+Umgekehrt dürfen von der Firma zur Verfügung gestellte externe Geräte nicht an betriebsfremde Geräte angeschlossen werden. Eine Verwendung von Wechseldatenträgern ist soweit möglich zu vermeiden. 
+
+Nicht mehr benötigte Dokumente sind umgehend vom Wechseldatenträger zu löschen. Bei beabsichtigter Weitergabe von USB-Datenträgern an Dritte ist ein fabrikneuer Datenträger zu verwenden, damit dieser keine gelöschten Daten wiederherstellen kann. Alte Datenträger sind beim IT-Verantwortlichen abzugeben. Bei einmal beschreibbaren Datenträgern wie CDs und DVDs sind diese zu zerstören (z.B. schreddern) bzw. sicher zu entsorgen. Werden sensible geschäftliche oder personenbezogene Daten auf einmal beschreibbaren Datenträgern archiviert, sind diese in einem Archiv zusätzlich separat verschlossen aufzubewahren.
+
+ 
+=== Nutzung von Telefoniegeräten
+
+Die Benutzung betrieblicher Telefone für private Gespräche ist grundsätzlich nicht gestattet. Ausgenommen davon sind dienstlich veranlasste Gespräche, wie z.B. die Benachrichtigung Angehöriger über dienstlich veranlasste Verspätungen oder Kommunikation in Notfällen.
+
+Die Privatnutzung kann durch eine IT-Privatnutzungsvereinbarung erlaubt werden. Ferner kann eine Übergabevereinbarung für mobile Geräte weitere Nutzungsregeln festlegen.
+
+ 
+==== Nutzung von Mehrwertdiensten
+
+Die Nutzung von Rufnummern zu Sonderdiensten, die höhere Kosten verursachen als der Anruf einer normalen, deutschen Festnetz- oder Mobilfunk-Rufnummer ist unzulässig. 
+// Davon ausgenommen sind Einwahlen in Telefonkonferenzen mit Kunden oder der Anruf bei Service-Rufnummern genutzter Dienstleister und Geräte-Hersteller.
+
+ 
+==== Besonderheiten für die Benutzung von Mobiltelefonen
+
+Bei Überlassung eines mobilen Geräts verbleibt das Gerät im Eigentum des Unternehmens. Das Unternehmen kann das Gerät vom Nutzer ohne Angabe von Gründen zurückverlangen. Von diesem Recht wird das Unternehmen insbesondere bei Verstoß gegen diese Vereinbarung oder Entzug der Nutzungsberechtigung aus anderen Gründen Gebrauch machen.
+
+ 
+Das Unternehmen behält sich die Einführung einer Mobile-Device-Policy vor, sowie die Nutzung einer Mobile-Device-Management-Lösung, um die regelkonforme Nutzung der Geräte zu überwachen und die verpflichtenden Sicherheitseinstellungen zu erzwingen. 
+
+===== Private Nutzung
+
+Eine private Nutzung der Telefoniefunktion sowie von E-Mail- oder Internet-Diensten über diese Geräte ist nicht gestattet. Der Nutzer darf eine im Gerät verwendete SIM-Karte nicht in private Geräte einsetzen bzw. mit privaten Geräten nutzen, noch durch eine private SIM-Karte ersetzen. Die Nutzung des Gerätes oder von Funktionen des Gerätes durch Dritte – auch Familienangehörige – ist untersagt.
+
+ 
+===== Roaming-Nutzung und Mehrwertdienste
+
+Das Unternehmen schließt einen Mobilfunkvertrag ab und trägt die mit diesem Mobilfunkvertrag insoweit anfallenden Kosten (Grundgebühr, Gesprächskosten, Datenoptionen). Für das Telefonieren im Ausland (»Voice-Roaming«) und das Nutzen von Datendiensten (z.B. Internet oder Email) im Ausland (»Data-Roaming«) können erhöhte Entgelte anfallen. Sowohl Voice- als auch Data-Roaming sind daher für dienstliche Zwecke zurückhaltend und kostenbewusst zu nutzen und für private Zwecke ausgeschlossen. Ein Abruf von Audio- oder Videostreaming oder Foto-Upload via Datenroaming im Ausland ist untersagt.
+
+Für die Nutzung zubuchbarer Optionen (SpeedOn, Roaming-Passes, etc.) sowie kostenpflichtiger Mehrwertdienste, ist vorab die Zustimmung des Unternehmens über den IT-Sicherheitsbeauftragten einzuholen. Hieraus entstehende Kosten sind grundsätzlich vom Nutzer zu übernehmen. Kosten für kostenpflichtige Apps, sofern nicht durch die IT zur Verfügung gestellt, sind ebenfalls vom Nutzer selbst zu tragen. Es ist untersagt, Dienste zu buchen, die eine regelmäßige Kostenabbuchung z.B. über die Mobilfunkrechnung auslösen.
+
+ 
+===== PIN-Aktivierung
+
+Auf dienstlichen Mobiltelefonen ist die PIN-Eingabe stets aktiviert zu halten. WLAN- und Bluetooth-Schnittstellen sind zu deaktivieren wenn sie nicht genutzt werden.
+
+ 
+===== Diebstahl, Defekt, Verlust und Sicherheitsverstöße
+
+Das Gerät ist vor Diebstahl zu schützen, d.h. es ist grundsätzlich bei sich zu führen bzw. unter Aufsicht zu halten. Das Gerät ist vor unberechtigtem Einblick und Zugriff, insbesondere bei Nutzung auf Dienstreisen (Zug, Automobil, Flugzeug, …) sowie im privaten Umfeld zu schützen.
+Der Defekt, Diebstahl oder sonst wie vermutete Verlust des Gerätes ist unverzüglich dem IT-Sicherheitsbeauftragten oder dem Vorgesetzten zu melden, um gebotene Maßnahmen einleiten zu können.
+Das Unternehmen ist im Falle des Verlustes berechtigt, das Gerät zu sperren, alle dienstlichen und privaten Inhalte bzw. Daten auf dem Gerät zu löschen sowie die SIM-Karte zu deaktivieren.
+
+// Der Nutzer hat das Gerät pfleglich zu behandeln. Bei Defekt, Verlust oder Zerstörung während der Regelnutzungszeit erhält der Nutzer regelmäßig ein gleichwertiges, ggf. gebrauchtes Ersatzgerät, jedoch kein neueres oder aktuelleres Gerät. Bei Sicherheitsverstößen wird die Synchronisation des Gerätes deaktiviert, etwa durch Wechsel des Passwortes, bei groben Sicherheitsverstößen kann das Gerät gelöscht werden, sofern die technischen Möglichkeiten das zulassen. Die Entscheidung obliegt der IT-Abteilung. Diese wird sich bemühen den Nutzer vor der Maßnahme in Kenntnis zu setzen.
+
+ 
+
+ 
+==== Regeln für Smartphones und Apps
+
+Auf dienstlich genutzten Geräten, vor allem Smartphones und Tablets, sollten nur betrieblich notwendige Apps installiert werden, die keine Gefahr für einen Abfluss betrieblicher Daten darstellen. 
+
+Dies betrifft insbesondere internetbasierte (Cloud- Services) als Speicher- und Backupdienste sowie alle Dienste wie z.B. Messenger, die über Schnittstellen (APIs) Zugriff auf Telefonbuch, E-Mails und andere auf dem Endgerät gespeicherte Daten haben. Sofern solche Apps auf Daten des Gerätes zugreifen wollen und der Nutzer nach seiner Zustimmung gefragt wird, ist dies abzulehnen bzw. diese Berechtigung zu entziehen. Ist dies aufgrund des Betriebssystems des Gerätes nicht möglich, so ist die Verwendung zu unterlassen.
+
+// Die Geschäftsleitung kann für einzelne Apps Ausnahmeregelungen zulassen.
+
+Der Nutzer ist für das regelmäßige Update der Betriebssystemsoftware sowie der Apps verantwortlich. Modifikationen an der Betriebssystemsoftware (Jailbreak/Rooting) sind untersagt.
+
+ 
+==== Aufzeichnung der Verbindungsdaten
+
+Die Verbindungsdaten aller ausgehenden Telefonate der Telefonanlage sowie aller dienstlichen Mobiltelefone werden gespeichert. Erfasst werden folgende Daten:
+
+* Datum, Uhrzeit, Dauer des Anrufs,
+* Nebenstelle, vor der Anruf abgeht bzw. bei der der Anruf eingeht,
+* vollständige gewählte Rufnummer und ggf. die Nummer von eigehenden Anrufen,
+    Betrag der Gebühren.
+
+ 
+
+Die Daten werden stichprobenartig auf Missbrauch (private Nutzung) kontrolliert. Besteht ein konkreter Missbrauchsverdacht oder ergibt sich ein solcher aus Stichprobenkontrollen, werden Daten für etwaige arbeitsrechtliche Maßnahmen ermittelt. Unberührt bleibt die persönliche Kontrolle durch Vorgesetzte (Augenschein). In dem Fall einer erlaubten Privatnutzung erteilt der Mitarbeiter dem Unternehmen die Einwilligung die Verbindungsdaten, die dann auch private, personenbezogene Daten enthalten können, zu analysieren.
+
+ 
+=== Benutzung des dienstlichen E-Mail-Postfaches
+
+Das E-Mail-Programm zur Nutzung auf dem Arbeitsplatzcomputer und den mobilen Geräten, inklusive der dienstlichen E-Mail-Adresse, sind ausschließlich dienstlich zu verwenden. Das Unternehmen filtert die E-Mails automatisiert, um die Zustellung von z.B. Viren, SPAM und anderen als schädlich erachteten Inhalte zu unterdrücken. Die ausgefilterten E-Mails werden ggf. in einem gesonderten Ordner vorgehalten, so dass Administratoren fälschlich ausgefilterte E-Mails widerherstellen können, wobei unvermeidlich Einsicht genommen wird.
+
+Eine Einrichtung von privaten E-Mail-Konten im E-Mail-Programm, die Nutzung der dienstlichen E-Mail-Adresse für das Senden privater E-Mails und die automatische oder manuelle Weiterleitung von E-Mails zwischen einem privaten und dem betrieblichen E-Mail-Konto ist aus Sicherheitsgründen untersagt. Unaufgefordert eingehende private E-Mails sind zu löschen und der Absender ist entsprechend zu informieren.
+
+// Private E-Mails können bei abgeschlossener IT-Privatnutzungsvereinbarung durch Webmail-Angebote über den Internetbrowser empfangen oder versandt werden. 
+Eine Weiterleitung dienstlicher Emails an einen privaten Account oder das Versanden oder Speichern dienstlicher Daten über bzw. in einem privaten Email-Account oder Web-Speicherplatz ist untersagt. 
+
+Im Rahmen gesetzlicher Aufbewahrungspflichten und für die rechtssichere Dokumentation des E-Mail-Verkehres können alle über den Unternehmens-E-Mail-Server ein- und ausgehenden E-Mails für eine Dauer von bis zu 10 Jahren revisionssicher, d.h. unveränderbar archiviert werden. 
+Der Arbeitgeber kann in die Inhalte von E-Mails bei betrieblichen Erfordernissen Einsicht nehmen. Gleiches gilt bei Offenlegung von E-Mails auf gerichtliche oder behördliche Anordnung oder im Rahmen von steuerlichen, sozialversicherungsrechtlichen, kartellrechtlichen oder sonstigen Prüfungen oder Ermittlungsverfahren bei begründetem Verdacht auf Straftaten. Sofern versehentlich auch private E-Mails über den Dienst-Zugang versendet und archiviert wurden, kann der Mitarbeiter deren Löschung aus dem Archiv nicht verlangen.
+
+Werden vertrauliche oder schützenswerte Informationen an Unternehmensexterne per E-Mail versendet, sind die Inhalte der E-Mails durch Einsatz von Verschlüsselung zu schützen. Die entsprechend aktuelle Verschlüsselungstechnik kann beim IT-Sicherheitsbeauftragten erfragt werden. Bei Nutzung des Verschlüsselungstools gelten o.g. Passwort-Anforderungen. Der unverschlüsselte Versand von Betriebs- und Geschäftsgeheimnissen ist untersagt.
+
+Beim Umgang mit E-Mail-Dateianhängen (Attachments) und Links in E-Mails ist äußerste Vorsicht geboten. Verdächtige Dateianhänge dürfen nicht geöffnet werden. Das Öffnen von Dateien oder Links in E-Mails von unbekannten Dritten, die Gewinne oder Sonderangebote versprechen oder unerwartet juristische Konsequenzen androhen, ist untersagt. Es ist zu beachten, dass Absenderadressen gefälscht sein können. Im Zweifel ist der IT-Sicherheitsbeauftragte um Rat zu fragen.
+
+ 
+=== Backup-Regelung
+
+Es hat sich gezeigt, dass Datensicherung dann am besten funktioniert, wenn nicht jeder einzelne Mitarbeiter Sicherungskopien seiner Daten anfertigt, sondern dies zentral geschieht. Die zentrale Datensicherung erfasst aber nur die auf den Servern gespeicherten Daten, lokale Daten – z.B. auf dem Desktop des PCs – werden nicht gesichert. Also müssen alle Daten auf den Servern gespeichert sein.
+
+
+Dies mag zwar für manchen umständlich klingen, ist aber in Zeiten des mobilen Netzzugriffs einfach und im Falle einer kurzfristigen Vertretung für alle Beteiligten äußert praktisch. Sofern eine Mitarbeiterin häufig außer Haus tätig ist, berät der IT-Sicherheitsbeauftragten hinsichtlich der Synchronisierung von Netzlaufwerken, der Verschlüsselung des Speichers des mobilen Gerätes und etwaig möglicher VPN-Zugriffe auf zentral gespeicherte Daten.
+
+Daher gilt:
+
+Beachten Sie die HINWEISE ZUR DATEIABLAGE in dieser Richtlinie.
+Eine lokale Datenhaltung ausschließlich nur auf dem Arbeitsplatzrechner bzw.Notebook ist nicht zulässig. Es dürfen lediglich für die notwendige Zeit lokale Kopien vorgehalten werden.
+Alle unterwegs auf Notebook/ PCs bearbeiteten Daten/Dateien – auch Zwischenstände – sind regelmäßig, spätestens nach Rückkehr, auf dem Server zu speichern.
+
+// TODO: auch für die Filialen wenn Nextcloud eingeführt ist.
+// Für die Filialen?
+
+Von daher ist es untersagt, private Daten auf den Firmengeräten zu speichern. Der Firma ist es nicht möglich, bei der Speicherung zwischen privaten und dienstlichen Daten zu unterscheiden. Somit werden auch private Daten bei einem Backup gespeichert. 
+// Diese Regel kann über eine Privatnutzungsvereinbarung relativiert werden.
+
+ 
+=== Regelungen zur Datei-Ablage
+
+Um keine Daten zu verlieren, dürfen wichtige Daten nicht ausschließlich auf der lokalen Festplatte des Arbeitsplatzcomputers gespeichert werden. Wird die Festplatte des lokalen Gerätes zerstört, z.B. durch versehentliches Fallenlassen des Notebooks, sind alle darauf gespeicherten Daten oft unwiederbringlich verloren. Zudem werden die lokal gespeicherten Daten nicht von der regelmäßigen Datensicherung erfasst, die die Daten auf dem Server sichert. Es wird also keine regelmäßige Sicherungskopie von den Daten auf den Arbeitsplatz-Rechnern bzw. den Notebooks angelegt.
+
+Alle Daten müssen im Firmen-Netz auf den dafür vorgesehenen Server-Laufwerken gespeichert werden. Das gilt auch für Zwischenstände. Die ausschließlich lokale Speicherung ist nur für Kopien von auf dem Server abgelegten Dokumenten zulässig.
+
+==== Ordnerstrukturen
+
+Daten auf den Laufwerken sind so zu speichern und in Unterverzeichnissen zu organisieren, dass sie ohne Probleme auch durch eine Vertretungsperson wieder auffindbar sind. Dabei ist eine maximale Verschachtelungstiefe der Ordner von 7 Ebenen nicht zu überschreiten.
+
+ 
+==== Ablage vertraulicher und/oder personenbezogener Daten
+
+Vertrauliche und/oder personenbezogene Daten dürfen in keinem Fall auf öffentlichen Server-Laufwerken abgespeichert werden, auch nicht kurzzeitig. Solche Daten sind – ggf. verschlüsselt oder in Passwort-geschützten Dateien – ausschließlich in solchen Verzeichnissen mit eingeschränktem Kreis von zugriffsberechtigten Personen zu speichern. Fragen Sie im Zweifel Ihren Datenschutzbeauftragten.
+
+ 
+
+ 
+==== Nicht-betriebliche / private Daten
+
+Es ist nicht gestattet, Daten, die nicht betrieblicher Natur sind oder für deren Speicherung kein betrieblicher Anlass vorliegt, im Unternehmensnetzwerk oder auf den Arbeitsplatzrechnern bzw. Notebook-PCs oder mobilen Geräten zu speichern. Das gilt im Besonderen für private Fotos, »lustige Filmchen«, oder urheberrechtlich geschützte Werke wie Musikdateien und Kinofilme.
+
+// Durch eine IT-Privatnutzungsvereinbarung kann eine Sonderregelung geschaffen werden, die es erlaubt, private Daten auf den lokalen Festplatten von Arbeitsplatz-PC/Notebook sowie auf mobilen Geräten zu speichern, sofern ein Zugriffs- und Einsichtsrecht, insbesondere bei Verdacht auf rechts- oder vertragswidrige Inhalte, eingeräumt wird, das Unternehmen private Daten im Zweifel löschen darf und von der Haftung bei Verlust, Veränderung oder Beschädigung von privaten Daten freigestellt wird. Untersagt ist dabei die auch nur temporäre Speicherung von Inhalten ohne urheberrechtliche Nutzungserlaubnis (»Raubkopien«). Je Nutzer dürfen maximal 5 GB privater Daten gespeichert werden.
+
+=== »Clean Desk« am Arbeitsplatz und im Unternehmen
+
+Smartphones, Tablet-PCs und Datenträger dürfen auch bei kurzfristiger Abwesenheit vom Arbeitsplatz nicht offen liegen gelassen werden oder am Gerät eingesteckt verbleiben. USB-Sticks und mobile Geräte sind bei Nichtbenutzung verschlossen aufzubewahren.
+
+Am Arbeitsplatz dürfen weder Unterlagen noch Datenträger mit sensiblen Daten unbeaufsichtigt und unverschlossen verbleiben. Außerhalb der Arbeitszeiten sind sämtliche Dokumente mit sensiblen Daten, sowie mobile dienstliche Geräte der Mitarbeiter unter Verschluss zu halten. Zugangsdaten (wie Username/Passwort) dürfen nicht schriftlich am Arbeitsplatz hinterlassen werden (etwa am Bildschirm angebracht, unter Tastatur oder Schreibunterlage – ausgenommen hiervon sind zentrale Administrations-Accounts, die in entsprechenden Tools verwaltet werden). Vertrauliche Unterlagen und Unterlagen mit personenbezogenen Daten gehören NICHT in den Papierkorb, sondern sind entweder zu schreddern oder in Datenschutz-Papierentsorgungs-Tonnen zu werfen.
+
+Bildschirm, Post- und Ablagekörbe müssen so angebracht sein, dass kein Besucher im Vorbeigehen Einblick nehmen oder Unterlagen einstecken kann, ohne dass es auffallen würde. Im Falle von kurzen Abwesenheiten muss durch Abmelden von allen Systemen bzw. durch Sperren des Bildschirms (mit erneuter Passworteingabe) sichergestellt sein, dass niemand unberechtigtes Zugang zu vertraulichen Daten erhält.
+
+ 
+==== Nutzung von Besprechungszimmern
+
+Beim Verlassen eines Besprechungszimmers sind alle Arbeitsdokumente, Präsentation, Flipcharts, USB-Speicher-Sticks, etc. mitzunehmen. Auch sind aus hygienischen Gründen alle Kaffeetassen- und Becher, Gläser, leere Flaschen, Geschirr und Unrat ordentlich zu entsorgen und der Tisch ist sauber zu hinterlassen. Der Beamer ist abzuschalten und die Stromversorgung zum Schutz des Leuchtmittels nicht eher zu trennen als die Lüftung sich abgeschaltet hat.
+
+ 
+==== Ausdrucke und Faxe
+
+Ausdrucke am Gemeinschafts-Drucker sind unverzüglich abzuholen. Bleiben Sie während des Kopiervorgangs bitte am Kopierer stehen. Holen Sie eingehende Faxe sofort ab, wenn Sie davon Kenntnis erhalten.
+
+ 
+=== Heim- und Telearbeit
+
+IMPORTANT: Die Heim- oder Telearbeit muss vorab schriftlich von der Geschäftsleitung genehmigt sein. 
+
+Die Heim- oder Telearbeit erfolgt ausschließlich auf und mit Geräten, die vom Unternehmen bereitgestellt wurden. Die <<Nutzung privater Hard- und Software>> ist ausdrücklich untersagt. + 
+Der IT Sicherheitsbeauftragte kann zusätzliche Konfigurationseinstellungen bzw. Programme vorgeben.
+
+Soweit die Genehmigung der Geschäftsführung erteilt wurde, ist folgendes zu beachten:
+
+Der Zweck der Heimarbeits- und Telearbeitsplatzregelung ist es, den unberechtigten Zugang zu Mobilgeräten auch außerhalb der Räumlichkeiten des Unternehmens zu verhindern. Gerade im häuslichen Umfeld sind die Daten vor Einsicht und oder Zugriff durch Dritte oder Haushalts- und Familienangehörige zu schützen.
+
+Jeder Mitarbeiter hat daher folgende technische und organisatorische Maßnahmen zu ergreifen, damit sichergestellt werden kann, dass Unterlagen und Daten, die sich in seinem Verfügungsbereich befinden, nicht missbraucht werden können, abhandenkommen oder Unbefugten zugänglich werden:
+
+* Der Transport von elektronischen Speichergeräten oder vertraulichen Akten bzw.
+* Unterlagen muss immer in verschlossenen Behältnissen erfolgen.
+* Während des Transportes dürfen diese Behältnisse nicht unbeaufsichtigt bleiben oder anderweitig privat weitergegeben werden.
+* Bildschirme sind grundsätzlich so zu platzieren, dass eine Einsicht durch Dritte
+ (etwa durch das Fenster oder eine offene Tür) nicht möglich ist.
+* Jeder Mitarbeiter stellt sicher, dass alle Unterlagen und elektronischen
+* Speichergeräte während der Abwesenheit unter Verschluss gehalten werden (verschließbarer Schrank).
+* Das Vernichten von vertraulichem Schriftgut darf stets nur mit den dafür vorgesehenen Aktenvernichtern erfolgen.
+* Datenträger, Unterlagen oder Ausdrucke dürfen nie im Hausmüll entsorgt werden.
+* Geräte wie zum Beispiel Notebooks, mit denen ein Zugriff auf das Firmennetzwerk möglich ist, dürfen niemandem zur Nutzung überlassen werden.
+* Die Person, die Ausstattung für Mobile Computing außerhalb der Räumlichkeiten der Organisation nutzt ist für die regelmäßige Sicherung der Daten verantwortlich.
+* Die Verbindung mit Kommunikationsnetzen und der Datenaustausch muss die Sensibilität der Daten widerspiegeln
+* Wenn die Aufbewahrung von Datenträgern nicht in einem verschlossenen Behältnis erfolgen kann, sind die darauf befindlichen Daten verschlüsselt vorzuhalten.
+
+
+=== Entsorgung, Vernichtung und Weiterverwendung
+
+Kopien/Fehlausdrucke mit sensiblem Inhalt gehören nicht in den Papierkorb. Wichtige Unterlagen mit einem Reißwolf/Papierschredder zu vernichten oder sie in die dafür bereitgestellten datenschutzkonformen und verschlossenen Entsorgungscontainer zu werfen. Dabei sind etwaige bereichsspezifischen Aufbewahrungsfristen zu beachten.
+
+ 
+=== Datenträger und Gerätschaften
+
+Alte oder defekte Gerätschaften oder Datenträger (Disketten, CDs, DVDs, Bänder, Festplatten, USB-Speicher, SSDs) sind nicht in den Müll zu werfen, sondern sind der IT-Abteilung zu übergeben.
+
+ 
+=== Verhalten bei IT-Sicherheitsvorfällen
+
+Grundsätzlich gilt: Bewahren Sie Ruhe! – Handeln Sie überlegt! Stimmen Sie sich intern ab!
+
+Sofern der Verdacht, die Wahrscheinlichkeit oder Gewissheit besteht, dass
+
+* Daten versehentlich oder absichtlich an einen nicht berechtigten Dritten, etwa an
+    einen falschen oder unbekannten E-Mail-Empfänger geschickt oder diesem sonst wie zur Kenntnis gelangt sind oder
+* sich ein Dritter oder Fremder Zugang zu den Systemen des Unternehmens verschafft hat
+* IT-Systeme sich ungewöhnlich verhalten, Dateien auf unerklärliche Weise verändert
+* oder gelöscht sind
+
+ist dies der Geschäftsleitung und dem IT-Sicherheitsbeauftragten unverzüglich ohne Ansehen der Verursachung und der Verantwortlichkeit zu melden. 
+
+Nach § 42a BDSG können Meldepflichten bestehen, deren Versäumnis oder schuldhafte Verzögerung eine etwaige Ordnungswidrigkeit zur Straftat machen. Des Weiteren bestehen möglicherweise zivilrechtliche Informationspflichten. Über Zeitpunkt und Form der Erfüllung dieser Pflichten entscheidet die Geschäftsleitung.
+
+Weitere Maßnahmen dürfen erst auf Veranlassung Berechtigter getroffen werden.
+
+Geben Sie keine Informationen an Dritte weiter, ohne dass Sie explizit dazu autorisiert wurden. Das gilt auch und insbesondere für Behörden, für Klienten und Pressevertreter.
+
+ 
+=== Verbesserung der Sicherheit
+
+Diese Richtlinie wird regelmäßig auf ihre Aktualität und Wirksamkeit geprüft und angepasst. Die Geschäftsleitung unterstützt die ständige Verbesserung des Sicherheitsniveaus. Alle Mitarbeiter sind angehalten, mögliche Verbesserungen oder Schwachstellen an die Geschäftsleitung und/oder dem Datenschutzbeauftragten weiterzugeben.
+
+ 
+// end::main[]
+=== Inkrafttreten
+
+Die Richtlinie tritt zum 01.01.2023 in Kraft.
+
+<<<
+
+[cols="2,5,3", options="header"]
+.Dokumentenmanagement
+|===
+|Dok.-Nr.
+|Dokument
+|Anmerkung
+
+
+|90-10
+|IT-Sicherheitsrichtlinie
+|dieses Dokument
+
+|90-11
+|IT-Sicherheitsmanagement
+|
+
+|40-01
+|Verpflichtungserklärung Vertraulichkeit Mitarbeitende
+|
+|40-01a
+|Anhang zur Verpflichtungserklärung Vertraulichkeit Mitarbeitende
+|
+|40-01b
+|Eidesstattliche Versicherung bei Ausscheiden aus dem Unternehmen
+|
+
+|90-41
+|Anleitung Bitlocker USB-Stick
+|
+|===
+
+
+// {nbsp} +
+// {nbsp} +
+// {nbsp} +
+// {nbsp} +
+// [.text-right]
+// [.small]#Version: {revnumber} ({revremark}) vom {revdate} | Status: {docstatus}#

@@ -1,0 +1,347 @@
+= IT-Sicherheitsmanagement (fiktive Beispielfirma BSI) GmbH
+:asciidoc-version: 2.0.20 [https://asciidoctor.org]
+:author: RMF 
+:email: isb@rmf.berlin
+:author: RMF 
+:source-highlighter: rouge
+:lang: de
+:icons: font
+:doctype: article
+:docstatus: In Bearbeitung
+// :docstatus: Aktiv
+// :docstatus: Archiviert (inaktiv)
+// :docstatus: adoc-Vorlage
+:asciidoc-file: 90-11_IT-Sicherheitsmanagement.adoc
+:docdate: 21.10.2020
+:revnumber: 0.1
+:revdate: {localdate}
+:revremark: Initial
+:last-update-label: zuletzt geändert: 
+:table-caption: Tabelle
+:sectnums:
+:toc-title: Inhalt
+:toc:
+:toclevels: 3
+
+// übersetzen mit asciidoctor zu PDF
+// asciidoctor-pdf -a pdf-themesdir=/Users/webmaster/Documents/asciidoc/resources/themes -a pdf-theme=isb -a pdf-fontsdir=/Users/webmaster/Documents/asciidoc/resources/fonts/ 90-11_IT-Sicherheitsmanagement.adoc
+// 
+// umwandeln in XML DocBook
+// asciidoctor -b docbook 90-11_IT-Sicherheitsmanagement.adoc
+// 
+// umwandeln von DocBook nach RTF
+// pandoc -s --normalize --smart -f docbook -t rtf 90-11_IT-Sicherheitsmanagement.xml -o 90-11_IT-Sicherheitsmanagement.rtf
+// 
+//  RTF kann dann in MS Word weiter bearbeitet werden
+
+
+
+
+== Basis-Absicherung
+// tag::image[]
+.Basiselemente der Cyber-Sicherheit (Quelle: Bundesamt für Sicherheit in der Informationstechnik)
+image::img/basiselemente-cyber-sicherheit.jpg[]
+[quote, Bundesamt für Sicherheit in der Informationstechnik(BSI)]
+In Zeiten der Digitalisierung kommen auch kleine und mittlere Unternehmen nicht umher, sich in Sachen Cyber-Sicherheit weiterzuentwickeln. Der leichte Einstieg bietet die Möglichkeit, sich Stück für Stück der Thematik zu nähern. Grundregeln der Cyber-Sicherheit werden erläutert.
+https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/KMU/leichter_Einstieg/leichter_Einstieg_node.html[BSI: Leichter Einstieg ]
+
+// end::image[]
+
+// tag::main[]
+=== IT-Grundschutzbausteine
+[cols="7,3", options="header"]
+.Bausteine und Reihenfolge 
+|===
+|Baustein|Reihenfolge
+|ISMS. 1 Sicherheitsmanagement|R1
+|ORP.1 Organisation|R1
+|ORP.2 Personal|R1
+|ORP.3 Sensibilisierung und Schulung zur Informationssicherheit|R1
+|ORP.4 Identitäts- und Berechtigungsmanagement
+|R1
+|CON.2 Datenschutz |R2
+|CON.3 Datensicherungskonzept|R1
+|CON.6 Löschen und Vernichten|R1
+|OPS.1.1.1 Allgemeiner IT-Betrieb|R1
+|OPS.1.1.2 Ordnungsgemäße IT-Administration|R1
+|OPS.1.1.3 Patch- und Änderungsmanagement|R1
+|OPS.1.1.4 Schutz vor Schadprogrammen|R1
+|OPS.1.1.5 Protokollierung|R1
+|OPS.1.1.6 Software-Tests und -Freigaben|R1
+|DER.2.1 Behandlung von Sicherheitsvorfällen|R1
+||R1
+||R1
+
+|===
+
+
+[.text-right]
+[.small]#Quelle: https://www.allianz-fuer-cybersicherheit.de/SharedDocs/Downloads/Webs/ACS/DE/NACD/toolkit_management_cyber_risiken_de.pdf?__blob=publicationFile&v=6?[Allianz für Cyber-Sicherheit: Toolkit für das Management von Cyber-Risiken]#
+
+== Zehn Fragen, die die Unternehmensleitung zum Thema Cyber-Sicherheit stellen sollte
+
+=== Politik und Governance
+==== Wie werden persönlich identifizierbare Informationen (PII) im In- und Ausland behandelt? Welche Sicherheitsvorkehrungen gibt es für gestohlene Geräte?
+
+==== Wie viele Dritte haben Zugang zu Ihren Daten und Systemen, und wie werden sie kontrolliert?
+
+
+==== Haben Sie einen Reaktionsplan für den Fall, dass Sie Ihr eigenes geistiges Eigentum oder das eines Kunden verlieren?
+
+=== Zentrale Sicherheitsinfrastruktur und -prozesse
+
+==== Erlauben Sie, dass irgendetwas in Ihrem Netzwerk direkt mit dem Internet kommuniziert?
+
+==== Erlauben Sie eine Ein-Faktor-Authentifizierung für den Fernzugriff?
+
+==== Wie verwalten Sie Ihre Internet-Gateways?
+
+=== Fortgeschrittene Abwehr
+
+==== Wie verwenden und speichern Sie Netflow-Daten?
+
+==== Wie verwalten Sie den Lebenszyklus Ihrer IT- und OT-Systeme?
+
+==== Gibt es eine zentrale Behörde, die alle Ihre Active Directory-Domänen verwaltet?
+
+==== Wie erhalten Sie verwertbare, nicht klassifizierte Cyber-Informationen?
+
+==== Setzen Sie ein Produkt zur Verhinderung von Datenlecks als Teil eines Programms gegen Insider-Bedrohungen ein?
+
+=== Die Bedrohung durch Cyber-Insider - eine reale und allgegenwärtige Gefahr
+
+- Unvorsichtige Mitarbeitende: Mitarbeitende, die ohne böswillige Absicht Ressourcen missbrauchen, gegen Nutzungsrichtlinien verstoßen, Daten falsch handhaben, nicht zugelassene Anwendungen installieren, usw.
+
+- Insider-Agenten: Insider, die von Dritten rekrutiert, umworben oder bestochen werden, um Daten zu exfiltrieren.
+
+- Verärgerte Mitarbeitende: Insider, die versuchen, ihrem Unternehmen durch die Zerstörung von Daten oder die Störung von Geschäftsabläufen zu schaden.
+
+- Böswillige Insider: Akteure, die ihre Privilegien nutzen, um zum eigenen Vorteil auf Daten zuzugreifen.
+
+- Rücksichtslose Dritte: Geschäftspartner, die die Sicherheit durch Nachlässigkeit, Missbrauch oder böswilligen Zugriff auf oder die Nutzung von Anlagen gefährden.
+
+==== Fragen, die die Unternehmensleitung zu Insider-Bedrohungen stellen sollte:
+
+- Welche Systeme gibt es (Hintergrundüberprüfungen, Kanäle für Mitarbeitende zur Meldung von Bedenken usw.), um Mitarbeitende zu überprüfen und bösartiges Verhalten zu erkennen? Besteht eine enge Zusammenarbeit zwischen der Informationssicherheit,der physischen Sicherheit, der Rechtsabteilung, der Personalabteilung, den Unternehmensermittlungen und anderen wichtigen Partnern bei der Verwaltung dieser Systeme?
+
+- Erhalten die Mitarbeitenden nur Zugang zu Daten und Systemen, die sie für ihre Arbeit benötigen (nicht mehr und nicht weniger)? Wie wird der Zugang verwaltet, wenn ein Mitarbeitende das Unternehmen verlässt oder eine neue Stelle im Unternehmen annimmt?
+
+- Weiß das Sicherheitsteam genau, welche Mitarbeitenden über erhöhte Privilegien verfügen, und werden diese überwacht, um sicherzustellen, dass sie ihren Zugang nicht missbrauchen?
+
+• Gibt es Verfahren und Technologien, um zu erkennen und zu verhindern, dass Informationen das Netz verlassen? Wird die Verwendung von Wechseldatenträgern (wie externe Speichermedien) kontrolliert?
+
+- Gibt es eine Richtlinie zur Datenklassifizierung, die eine ordnungsgemäße Kennzeichnung und Handhabung gewährleistet?
+
+• Woher wissen wir, dass unsere Erkennungsversuche funktionieren und wie wirksam sie sind? Testen wir sie regelmäßig mit internen Mitteln und externen Parteien, um sie zu validieren?
+
+• Gibt es einen umfassenden Plan für die Reaktion auf Vorfälle, der alle Beteiligten einbezieht (Personalabteilung, Rechtsabteilung, Compliance, Sicherheit und andere)? Besteht eine enge Beziehung zu Partnern der Strafverfolgungsbehörden für die Reaktion auf Vorfälle? Gibt es interne forensische Fähigkeiten oder wird ein externes Unternehmen beauftragt?
+
+• Verfügen wir über ein Sicherungs- und Wiederherstellungsprogramm? Können wir unsere Systeme und kritischen Daten wiederherstellen, wenn der Zugriff auf das Hauptsystem verhindert wird oder die Daten beschädigt werden? Verfügen wir über strenge Kontrollen in Bezug auf unsere kritischen Lieferantenbeziehungen?
+
+
+=== Reaktion auf Vorfälle
+==== Zielsetzung:
+Die Fähigkeit, auf Vorfälle zu reagieren, ist notwendig, um Ereignisse und Zwischenfälle schnell zu erkennen, Verluste und Zerstörungen zu minimieren, die ausgenutzten Schwachstellen zu entschärfen und die Geschäftsdienste wiederherzustellen. Dieses Toolkit beschreibt die Schritte, die Unternehmensleitung durchführen sollte, um sicherzustellen, dass ihre Organisationen über ein effektives Programm zur Reaktion auf Vorfälle verfügen.
+
+==== Die zur Unterstützung der Reaktion auf Vorfälle erforderlichen Fähigkeiten und Funktionen sind:
+
+• Verwaltung: Kenntnis der Vermögenswerte und ihres Verbleibs mit entsprechenden Kontrollen, Datenschutz und regelmäßiger Risikobewertung und -verwaltung
+
+• Schutzfähigkeiten: Richtlinien, Sensibilisierung und Schulung der Mitarbeitenden, Kontrollverfahren zur Überprüfung des Zugangs, Verfahren zum Schutz von Informationen und kontinuierliche Überprüfung:
+
+• Erkennung: Fähigkeiten zur Erkennung von Anomalien und Ereignissen sowie zur kontinuierlichen Überwachung der Wirksamkeit
+
+• Reaktion: Reaktionsplan, regelmäßige Cyber-Übungen, koordinierte Bemühungen zwischen Technologie-Teams, Unternehmen, Rechtsabteilung, Kommunikation und Strafverfolgungsbehörden
+
+• Wiederherstellen: Rasche Abhilfe und Nachbesserung
+
+==== Fragen, die die Unternehmensleitung zur Reaktion auf Zwischenfälle stellen sollte:
+
+. Gibt es einen Plan mit einer klaren Definition von Ereignissen, Rollen und Verantwortlichkeiten sowie Eskalationsprozessen? Sind zentrale Unternehmensfunktionen wie IT, Wirtschaft, Recht und Kommunikation in den Reaktionsplan integriert? Wie fügt er sich in den Krisen- und Geschäftswiederherstellungsplan des Unternehmens ein?
+
+. Welches sind die Eskalationskriterien für die Benachrichtigung der obersten Führungsebene und des Vorstands, falls erforderlich? Wer hat die endgültige Entscheidungsbefugnis?
+
+. Wird die Widerstandsfähigkeit Unternehmens und der Organisationen anhand großer Risikoszenarien getestet, die durch Übungen und gemeinsame Bedrohungssimulationen geübt werden?
+
+. Gibt es etablierte Beziehungen zu Sicherheitsbehörden, Strafverfolgungsbehörden und wichtigen Regulierungsbehörden? Gibt es Beziehungen zum Informationsaustausch durch Informationsaustausch- und Analysezentren und Konsortien und andere Unternehmen?
+
+. Kennt die Organisation die Melde- und Berichtspflichten (z. B. US Securities and Exchange Commission, General Data Protection Regulation, BSI-Gesetz, Verteidigungsministerium und Defense Security Service für geprüfte Auftragnehmer und die Bundesregierung) und behält sie im Auge? Wie lauten sie?
+
+. Welches sind die Kriterien und wie sieht das Verfahren zur Offenlegung von Vorfällen gegenüber Investoren aus?
+
+. Was können wir tun, um die Verluste durch einen Vorfall zu verringern?
+
+. Welches sind die wichtigsten Leistungsindikatoren, um die Wirksamkeit der Reaktion auf Vorfälle zu messen (z. B. Zeit bis zur Entdeckung und Zeit bis zur Reaktion)?
+
+. Welche wichtigen Schritte unternehmen wir nach einem kritischen Zwischenfall? Welche Schritte unternehmen wir, um sicherzustellen, dass sich ein solcher Vorfall nicht wiederholt? Was hat die Organisation aus dem Vorfall gelernt?
+
+=== Persönliche Cyber-Sicherheit für Mitglieder der Unternehmensleitung
+
+==== Zielsetzung:
+Auch wenn die Cyber-Sicherheit in einem Unternehmen unglaublich wichtig ist, müssen die Mitglieder der Unternehmensleitung die richtige Cyber-Sicherheitspraxis anwenden und ihre Geräte und ihre Privatsphäre schützen. Dieses Tool enthält 10 Empfehlungen für Unternehmensleitende, um ihre eigene Cyber-Sicherheit zu verbessern.
+
+. Stellen Sie sicher, dass alle Ihre Geräte mit aktueller Software ausgestattet sind. Es ist wichtig, dass Sie Ihre Geräte und Anwendungen auf dem neuesten Stand der Software halten, die verfügbar ist.
+
+. Sperren Sie Ihr WiFi, so selbstverständlich wie Sie auch Ihr Haus abschließen. Legen Sie ein neues Passwort fest, das über die Werkseinstellung hinausgeht. Richten Sie ein Gastkonto für Hausbesucher, Auftragnehmer usw. ein.
+
+. Sichern Sie Ihre Daten häufig - mindestens einmal pro Monat. Nutzen Sie einen verschlüsselten Backup-Dienst, um sich vor Ransomware zu schützen. 
+
+. Denken Sie nach, bevor Sie etwas posten, und minimieren Sie Ihr digitales Risiko. Teilen Sie nichts, was Krimi
+nellen Aufschluss über Ihren derzeitigen oder zukünftigen Aufenthaltsort geben könnte. Sperren Sie Ihre Konten in den sozialen Medien, indem Sie Ihre Beiträge auf Freunde beschränken. Überprüfen Sie regelmäßig Ihre Datenschutz- und Sicherheitseinstellungen und setzen Sie sie um.
+
+. Schalten Sie die Zwei-Faktor-Authentifizierung für alles ein. Verwenden Sie biometrische Daten, wo immer es möglich ist.
+
+. Verwenden Sie komplexe Kennwörter für sensible Konten. Verwenden Sie (z. B.) den Schlüsselbund Ihres iPhones, um Ihre Passwörter zu sichern. Verwenden Sie die empfohlenen sicheren Passwörter.
+
+. Bestimmen Sie einen Computer/Gerät (den Ihre Kinder nicht benutzen können), um sensible und finanzielle Transaktionen durchzuführen.
+
+. Recherchieren Sie regelmäßig und gründlich, was es über Sie und Ihre Familie zu wissen gibt. 
+
+. Entsorgen Sie elektronische Geräte sicher; löschen oder zerstören Sie das Gerät.
+
+. Sperren Sie Ihr Guthaben. Eine Kreditsperre ist ein wirksames Mittel gegen finanziellen Identitätsdiebstahl und gibt Ihnen maximale Kontrolle darüber, wer Zugang zu Ihrem Kredit hat
+
+
+
+
+=== Verantwortliche
+
+==== Geschäftsführung
+
+- Die Leitungsebene trägt die Gesamtverantwortung für Informationssicherheit.
+- Die Leitungsebene muss jederzeit über mögliche Risiken und Konsequenzen für die Informationssicherheit informiert sein. 
+- Die Leitungsebene initiiert den Informationssicherheitsprozess innerhalb der Institution und benennt einen verantwortlichen Informationssicherheitsbeauftragten (ISB).
+- Die Leitungsebene unterstützt den ISB vollständig und stellt ausreichende Ressourcen bereit, um die gesetzten Ziele erreichen zu können.
+
+==== Stellvertretende Geschäftsführung
+
+==== Informationssicherheitsbeauftragte (ISB)
+
+In einer Institution muss es einen Ansprechpartner für alle Aspekte rund um das Thema Informationssicherheit geben. Nur ein zentraler Ansprechpartner kann ein gängiges Problem lösen: Im geschäftlichen Alltag werden Aspekte der Informationssicherheit häufig vernachlässigt, sie gehen in manchen Institutionen schlichtweg unter. Dadurch besteht bei fehlender oder unklarer Aufteilung der Zuständigkeit die Gefahr, dass Informationssicherheit grundsätzlich zu einem »Problem anderer Leute«å wird. 
+
+Der ISB koordiniert die Aufgabe »Informationssicherheit«, identifiziert Schwachstellen und arbeitet daran, das Sicherheitsniveau zu erhöhen. 
+
+===== Zuständigkeiten und Aufgaben des ISB
+
+- Informationssicherheitsprozess steuern und bei allen damit zusammenhängenden Aufgaben mitwirken
+- die Leitungsebene bei der Erstellung der Leitlinie zur Informationssicherheit unterstützen
+- die Erstellung des Sicherheitskonzepts, des Notfallvorsorgekonzepts und Sicherheitsrichtlinien koordinieren sowie weitere Richtlinien und Regelungen zur Informationssicherheit erlassen
+- die Realisierung von Sicherheitsmaßnahmen initiieren und überprüfen
+- der Leitungsebene über den Status quo der Informationssicherheit berichten
+- sicherheitsrelevante Projekte koordinieren
+- Sicherheitsvorfälle untersuchen
+- Sensibilisierungs- und Schulungsmaßnahmen zur Informationssicherheit initiieren und koordinieren
+
+==== Datenschutzbeauftragter
+
+==== Teamleitung
+
+
+=== Sicherheitsziele und Leitlinie zur Informationssicherheit
+
+Ziel des Sicherheitsmanagements ist es, ein angestrebtes Sicherheitsniveau zu erreichen und dieses dauerhaft aufrechtzuerhalten sowie bestenfalls stetig zu verbessern. Daher müssen der Prozess selbst und die Organisationsstrukturen für Informationssicherheit regelmäßig daraufhin überprüft werden, ob sie angemessen, wirksam und effizient sind. Dasselbe gilt für die gewählten Maßnahmen.  
+
+==== Sicherheitsziele
+
+- Sicherheitsrisiken für die Institution und deren Informationen
+- Auswirkungen und Kosten im Schadensfall
+- Auswirkungen von Sicherheitsvorfällen auf kritische Geschäftsprozesse
+- Sicherheitsanforderungen, die sich aus gesetzlichen und vertraglichen Vorgaben ergeben
+- die für eine Branche typischen Vorgehensweisen zur Informationssicherheit
+- der aktuelle Stand der Informationssicherheit in der Institution mit abgeleiteten Handlungsempfehlungen
+
+==== Informationsverbund und Geltungsbereich
+
+Zum Informationsverbund der (fiktive Beispielfirma BSI) GmbH gehören die Geschäftsführung, alle Filialen, die Erziehungstellen, die Geschäftsstelle und die Mitarbeitenden für Lohn- und Finanzbuchhaltung.
+
+Zu den externen Partnern gehören die Firma ABC für die Bilanz und die Firma XYZ für die Lohnabrechnung.
+
+Für die Geschäftsprozesse  und Fachaufgaben:
+
+Für die Schnittstellen zu externen Partnern:
+
+
+
+
+==== Sicherheitsniveau
+
+=== Organisation des Sicherheitsprozesses
+
+==== Verantwortlichkeiten
+
+==== Prozesse
+
+==== Schnittstellen
+
+==== Kommunikationswege
+
+=== Sicherheitskonzept
+
+
+=== Durchführung des Sicherheitsprozesses
+
+// end::main[]
+
+[cols="1,5,2", options="header"]
+.Dokumentenmanagement
+|===
+|Nr.
+|Anlage bzw. Verweis auf weitere Dokumente
+|Dok.-Nr./Anmerkung
+
+|
+|
+|
+
+|===
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+[.text-right]
+[.small]=Version: {revnumber} ({revremark}) vom {revdate} | Status: icon:hourglass-start[] {docstatus}=
+
+// icon:times[]
+
+// icon:check[]
+
+// icon:file[]
+
+// icon:question-circle[]
+
+// icon:exclamation-triangle[]
+
+// icon:list-ol[]
+
+// icon:list-ul[]
+
+// icon:comment[]
+
+// icon:pencil[]
+
+// icon:folder-open[]
+
+// icon:exclamation-circle[]
+
+// icon:link[]
+
+// icon:users[]
+
+// icon:hourglass-start[]
+
+// icon:hourglass-end[]
+
+// icon:question[]
+
+// icon:chain-broken[]
+
+// icon:[]
+
+// icon:[]
+
+// icon:[]
+
+// icon:[]
+
+// icon:[]

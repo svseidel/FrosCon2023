@@ -1,0 +1,439 @@
+:revealjs_theme: white
+:revealjs_transition: slide
+:revealjs_slide_number: true
+:revealjs_plugins: katex, notes, highlight
+:revealjs_slide_options: role=doc-toc
+:customcss: slides.css
+:email: it-support@rmf.berlin
+:author: RMF 
+:source-highlighter: rouge
+:lang: DE
+:icons: font
+:docstatus: In Bearbeitung
+// :docstatus: Aktiv
+// :docstatus: Archiviert (inaktiv)
+:asciidoc-file: slides.adoc
+:docdate: 14.05.2023
+:revnumber: 0.1
+:revdate: {localdate}
+:revremark: Slides
+:last-update-label: zuletzt geändert: 
+:revealjs_slideNumber: true
+:hide-uri-scheme:
+:imagesdir: img/
+:title-slide-background-image: asciidoctor-logo.svg
+// :table-caption: Tabelle
+:toc-title: 
+:toc: macro
+:toclevels: 1
+
+= Admin-Dokumentation mit AsciiDoc
+
+[.text-links]
+== Weniger schlecht dokumentieren
+[step=1]
+"Die Welt wird aber sicher kein schlechterer Ort dadurch, dass Sie […] die allgemeine Unzulänglichkeit von fast allem anerkennen und sich damit begnügen Code zu schreiben, den Sie selbst auch in sechs Monaten noch verstehen können."
+-- Kathrin Passig & Johannes Jander, Weniger Schlecht programmieren
+
+[step=2]
+"[…](Dokumentationen) sind kein dekoratives Element, das man ganz zum Schluss anbringt, wenn die eigentliche Arbeit getan ist. Bei Menschen von durchschnittlicher (lies: nicht vorhandener) Selbstdisziplin und Willenskraft findet dieser letzte Schritt sowieso nie statt. Und selbst wenn man sich dazu durchringt, hat man die Hälfte der Überlegungen, die einen […] (in dem Prozess) beschäftigten schon wieder vergessen."
+-- ebenda
+
+// [discrete]
+== Was Sie erwartet …
+// [[toc]]
+toc::[]
+
+== Dokumentenmanagement
+
+**Dokumentenmanagementsystem** 
+
+* Umfangreiche Dokumentation im Unternehmen
+** Prozesse und Verfahren
+** Handbücher und Anweisungen für Mitarbeitende der verschiedenen Abteilungen 
+** DSGVO
+** IT-Grundschutz (BSI)
+* IT-Dokumentation als Teil der Geschäftsprozesse
+* Dokumentation als Wissenserhalt und Wissensweitergabe
+** unabhängig von einzelnen Personen
+
+== Dokumentation – Zielgruppen
+* intern
+** Dokumentation der eigenen Arbeit
+** Admin-Kolleg:innen 
+** Entwickler-Kolleg:innen 
+* extern
+** Geschäftsführung
+** Leitungskräfte
+** Endanwender:innen
+** externe Dienstleister
+
+
+
+
+== Anforderungen
+// image::asciidoctor-logo.svg[background,size=50%]
+
+* Hauptdokument mit beliebigen Filialdokumenten
+* Filialdokument auch als Einzel-PDF mit gleichem Layout
+* nicht-proprietäres Dateiformat
+* aber auch Ausgabe als Word-Dokument erwartet
+* unabhängig vom Betriebssystem 
+
+[step=1]
+* LaTeX
+* Markdown
+* AsciiDoc
+* …
+
+=== … Anforderungen 
+* Auch von Nicht-Programmierer:innen zu pflegen
+* Import code / code-snippets on the fly 
+* gemeinsames Arbeiten an (Teil-)Dokumenten
+* Versionskontrolle 
+* Aktueller Stand der Dokumentation mind. in der Firmen-Cloud (PDF)
+* Firmeninternes Wiki 
+
+[step=1]
+* Ausgabe als 
+  ** PDF – auch als Einzel-Dokumente
+  ** Word *.docx
+  ** markdown strict -> Import in link:https://www.bookstackapp.com/[BookStack, window="_blank"] (Wiki)
+
+
+
+// [.notes]
+// --
+// * tell anecdote
+// * make a point
+// --
+
+== AsciiDoc und AsciiDoctor
+image::asciidoctor-logo.svg[120,120]
+
+=== AsciiDoc – ist die Sprache
+image::asciidoctor-logo.svg[120,120]
+- Auszeichnungssprache ähnlich wie Markdown https://asciidoc.org/[window="_blank"]. 
+- Großer Funktionsumfang 
+- Seit über 15 Jahren verfügbar und weiterentwickelt
+- Standardisierung seit 2020 bei der Eclipse Foundation (https://www.eclipse.org/org/workinggroups/asciidoc-charter.php)
+
+=== AsciiDoctor – ist das Werkzeug
+- »a fast text processor and publishing toolchain for converting AsciiDoc to HTML5, DocBook and more« https://asciidoctor.org/[window="_blank"] und https://docs.asciidoctor.org/[window="_blank"]
+- Open Source
+- Läuft auch in Java, Ruby und JavaScript
+
+[NOTE]
+Ausgabe in weitere Formate wie EPUB, HTML, DocBook, Manpage via 'pandoc' usw. möglich
+
+
+[.text-links]
+=== Web-Links Dokumentation zu AsciiDoc/AsciiDoctor
+
+link:https://asciidoctor.org/docs/[AsciiDoctor Documentation, window="_blank"]
+
+link:https://asciidoctor.org/docs/asciidoc-syntax-quick-reference[AsciiDoc Syntax Quick Reference, window="_blank"]
+
+link:https://github.com/asciidoctor/asciidoctor-pdf/blob/v1.5.0.beta.7/docs/theming-guide.adoc[AsciiDoctor PDF Theming Guide, window="_blank"]
+
+link:https://github.com/asciidoctor/asciidoctor-pdf/tree/main/data/themes[AsciiDoctor PDF Default / Base Themes, window="_blank"]
+
+[.text-links]
+=== … Web-Links Dokumentation zu AsciiDoc/AsciiDoctor
+
+icon:link[] Antora (Alexander Schwartz)::
+  icon:users[] The multi-repository documentation site generator for tech writers who ♥︎ writing in AsciiDoc. link:https://antora.org/[https://antora.org/, window="_blank"]
+
+Siehe auch link:https://docs.antora.org/antora/latest/[https://docs.antora.org/antora/latest/, window="_blank"]
+
+// [.text-links]
+// === Docs as Code
+// Store documentation in multiple repositories
+
+// * No matter how many git repositories you use, Antora can retrieve and aggregate all the content from them to assemble a documentation site.
+// Workspaces that fit team and content requirements
+
+// * Since documentation files can be stored in separate repositories, the teams that maintain them can use the administration policies, version schema, and release schedule that works for them.
+
+
+== VS Codium / VS Code einrichten
+// === VSCodium
+image::code.png[100,100] 
+VSCodium:: Free/Libre Open Source Software Binaries of VS Code. +
+VSCodium is a community-driven, freely-licensed binary distribution of Microsoft’s editor VS Code. 
+
+// === Visual Studio Code
+image::Visual_Studio_Code_icon.png[60,60] 
+VS Code:: Visual Studio Code is licensed under this link:https://code.visualstudio.com/license[not-FLOSS, window="_blank"] license and contains telemetry/tracking. 
+
+
+=== Empfehlenswerte PlugIns 
+//– VSCodium / VS Code
+
+link:https://open-vsx.org/?search=&category=&sortBy=relevance&sortOrder=desc[VSCodium | Open VSX Registry, window="_blank"]
+
+link:https://marketplace.visualstudio.com/vscode[Visual Studio | Marketplace, window="_blank"]
+
+* AsciiDoc
+* AsciiDoc Slides
+* Better Comments
+* Bookmarks
+* Code Spell Checker
+* German – Code Spell Checker
+* German Language Pack for Visual Studio Code
+
+[.text-links]
+=== … Empfehlenswerte PlugIns
+
+* PlantUML
+* PlantUML Syntax
+* Project Manager
+* Todo Tree
+* vscode-icons
+
+[.text-links]
+=== Tasks einrichten
+Mit Tasks können sich wiederholende Aufgaben leicht automatisiert werden. 
+
+Im Projekt-Verzeichnis ein Verzeichnis `.vscode` anlegen und darin in `tasks.json` die gewünschten Aufgaben definieren.
+
+Hier dieses AsciiDoc-Dokument in HTML5 wandeln und HTML-Datei im Browser öffnen.
+
+.Slides asciidoc -> html5
+[source,bash]
+----
+include::.vscode/tasks.json[tag=main]
+----
+
+[.notes]
+--
+Zum Build-Prozess jedoch später mehr.
+--
+
+
+== Hilfreiche Tools 
+
+* link:https://obsidian.md/[Obsidian, window="_blank"] – die private und flexible App für Markdown-Notizen, die sich an Ihre Denkweise anpasst. +
+Basierend auf der Zettelkasten-Idee von Niklas Luhmann; jede Notiz kann mit jeder beliebigen anderen Notiz verlinkt werden. +
+* Clipboard-Manager
+// * link:https://bookstackapp.com[BookStack, window="_blank"]
+* link:https://bookstackapp.com[BookStack, window="_blank"] Simple & Free Wiki Software +
+BookStack is a simple, self-hosted, easy-to-use platform for organising and storing information.
+
+[.columns]
+=== … BookStack Wiki
+
+[.column]
+--
+* Diffenrenziertes Rollen- und Rechtesystem.
+** Admins
+** Leitungskräfte
+** Sachbearbeitung
+** oä.
+--
+
+[.column]
+--
+* Informationsstruktur: 
+** Regale
+*** Bücher
+**** Kapitel
+***** Seiten
+--
+
+== Live-Demo
+
+Diese Slides und die Dateien der Live-Demo sind bei github zu finden.
+link:https://github.com:rmfberlin/FrosCon2023.git[github.com:rmfberlin/FrosCon2023.git, window="_blank"]
+
+== Arbeitsstruktur
+* ein zentrales Verzeichnis asciidoc/ressources, das für alle AsciiDoc-Projekte die benötigten Templates, Fonts, Images usw. enthält (hier in der Demo im Projektverzeichnis)
+** resources/fonts
+** resources/img
+** resources/themes
+* im Projekt-Verzeichnis ein Verzeichnis ./vscode
+** darin tasks.json mit den projektbezogenen Aufgaben
+* templates/ für projektbezogene Vorlagen
+*  ggf. weitere Unterverzeichnisse
+
+
+== AsciiDoc Document Structure
+
+[source, highlight=1..3]
+----
+= Document Title (Level 0)
+// Header attribute
+
+== Level 1 Section Title
+
+=== Level 2 Section Title
+
+==== Level 3 Section Title
+
+===== Level 4 Section Title
+
+====== Level 5 Section Title
+
+== Another Level 1 Section Title
+
+----
+
+[.text-links]
+=== Document Header – Attributes
+Im Kopf einer *.adoc-Datei können nach dem ersten `=` für den Dokumententitel Attribute gesetzt werden. Diese werden mit `:` eingeschlossen. Zum Beispiel
+
+[source]
+----
+:docstatus: In Bearbeitung 
+----
+
+Mit 
+
+[source]
+----
+ {docstatus}
+----
+
+wird der Inhalt/Wert des Attributes `:docstatus:` als "{docstatus}" ausgegeben.
+
+=== Beispiel Document Header
+[source]
+----
+:author: RMF 
+:email: it-support@rmf.berlin
+:source-highlighter: rouge
+:lang: DE
+:icons: font
+:doctype: book
+:docstatus: Neufassung (edit)
+// :docstatus: Aktiv
+// :docstatus: Archiviert (inaktiv)
+:asciidoc-file: 90-01-admin-doku.adoc
+:docdate: 08.04.2020
+:revnumber: 2.0.24
+:revdate: {localdate}
+:revremark: BookStack
+:last-update-label: zuletzt geändert: 
+:table-caption: Tabelle
+:toc-title: Inhalt
+:toc: macro
+:toclevels: 3
+:sectnums:
+:hide-uri-scheme:
+:chapter-label: Kapitel
+:hyphens:
+:all-docs!:
+:toc:
+:appendix-caption: Anhang
+:title-page: 
+----
+
+[.text-links]
+== Haupt- und Filialdokumente
+
+* Die Aufteilung in Einzeldokument dient der besseren Wartbarkeit und Revision der einzelnen Dokumentationen. 
+* Ebenso können einzelne Dokumente herausgegeben werden, 
+** icon:exclamation-triangle[] ohne die gesamte Dokumentation – die auch Sicherheitsinformationen enthält – 
+* zur Verfügung stellen zu müssen.
+
+
+
+
+=== … Haupt- und Filialdokumente
+// [step=1]
+* Jedes AsciiDoc-Dokument kann sowohl Haupt- als auch Filialdokument sein.
+* Filialdokumente werden über die Directive `include::dateiname.art[tag=MyTag]` in das Hauptdokument eingebunden.
+
+// [step=2]
+* Dabei können einzelne oder mehrere Abschnitte des Filialdokuments eingebunden werden.
+* Der jeweilige Abschnitt wird mit `tag::MyTag` und `end::MyTag` als Kommentarzeile eingeschlossen. 
+* Kommentar entsprechend der Syntax der jeweiligen Quelldatei wie *.adoc. *.py, *.sh usw.
+
+[.text-links]
+=== Umfangreiche Dokumente mit vielen Filialdokumenten
+
+Bei mehreren Abschnitten müssen unterschiedliche Tags vergeben werden. +
+`include::dateiname.adoc[tag=MyTag]` +
+`include::dateiname.adoc[tag=AnotherTag]`
+
+
+Im Document Header kann ein Attribute `:all-docs:` gesetzt werden. 
+
+Negiert wird dieses Attribute mit `:all-docs!:`
+
+Darüber lassen sich Filialdokumente ein- bzw. ausschließen.
+
+Quellcode wird wie folgt inkludiert:
+
+[source]
+----
+ ifdef::all-docs[]
+ [source, art]
+ ----
+  include::dateiname.art[tag=MyTag]
+ ----
+ endif::[]
+----
+
+
+
+[.text-links]
+== Corporate Design – AsciiDoc Themes 
+
+Die Ausgabe des PDF bzw. des HTML lässt sich durch Themes-Anweisungen und entsprechende Fonts sowie Logo und Hintergründe dem gewünschten Corporate Design anpassen.
+
+link:https://github.com/asciidoctor/asciidoctor-pdf/blob/v1.5.0.beta.7/docs/theming-guide.adoc[Asciidoctor PDF Theming Guide, window="_blank"]::
+https://github.com/asciidoctor/asciidoctor-pdf/blob/v1.5.0.beta.7/docs/theming-guide.adoc
+
+link:https://github.com/asciidoctor/asciidoctor-pdf/tree/main/data/themes[AsciiDoctor PDF Default / Base Themes, window="_blank"]:: 
+https://github.com/asciidoctor/asciidoctor-pdf/tree/main/data/themes
+
+* Projektbeispiel
+
+== Hilfreiche Videos | Links
+
+TL;DR 
+
+TL;DS
+
+[.text-links]
+=== Alexander Schwartz
+link:https://www.youtube.com/watch?v=JWuUyLTihac[Asciidoctor Deep Dive, window="_blank"]::
+https://www.youtube.com/watch?v=JWuUyLTihac
+
+link:https://www.udemy.com/course/technical-writing-with-asciidoc-and-intellij-idea/?referralCode=0FA2480E923688CA6468[Technical Writing with AsciiDoc and IntelliJ IDEA bei Udemy – kostenpflichtig, window="_blank"]::
+https://www.udemy.com/course/technical-writing-with-asciidoc-and-intellij-idea/?referralCode=0FA2480E923688CA6468
+
+[.text-links]
+==== Antora
+link:https://www.youtube.com/watch?v=SYMyUm5Ij_4&t=1158s[2021 - Online-Dokumentation für Nutzer mit AsciiDoc und Antora (FroSCon), window="_blank"]::
+https://www.youtube.com/watch?v=SYMyUm5Ij_4&t=1158s
+
+link:https://www.youtube.com/watch?v=OyTxa7oQBMA[Online-Dokumentation für Nutzer mit AsciiDoc und Antora - ObjektForumOnline Edition (2022), window="_blank"]::
+https://www.youtube.com/watch?v=OyTxa7oQBMA
+
+[.text-links]
+=== Ralf D. Müller
+link:https://www.youtube.com/watch?v=1W5fEku4-_A[Docs-as-Code with docToolchain, window="_blank"]::
+https://www.youtube.com/watch?v=1W5fEku4-_A
+
+[.text-links]
+=== Installation auf Mac ARM M1 / M2 Prozessor
+link:https://www.rubyonmac.dev/[Goodbye gem and Ruby installation issues, window="_blank"]::
+https://www.rubyonmac.dev/
+
+== Fragen / Anmerkungen
+**Vielen herzlichen Dank!**
+
+NOTE: Fragen icon:question-circle[]
+
+TIP: Anmerkungen / Hinweise icon:comment[]
+
+// icon:comment[] Fragen
+
+// IMPORTANT: Hinweise
+
+// CAUTION: Hinweise
+
+// WARNING: Hinweise
+

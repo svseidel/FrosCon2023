@@ -1,0 +1,907 @@
+= IT-Administration | IT-Sicherheit | Datenschutzeinstellungen: Dokumentation
+:asciidoc-version: 2.0.20 [https://asciidoctor.org]
+:asciidoc-file: 90-01-admin-doku.adoc
+:author: RMF
+:email: it-support@rmf.berlin
+:source-highlighter: rouge
+:lang: DE
+:icons: font
+:title-page: 
+:table-caption: Tabelle
+:figure-caption: Abb.
+:doctype: book
+:last-update-label: zuletzt geändert: 
+:sectnums:
+:toc-title: Inhalt
+:toc:
+:toclevels: 2
+:appendix-caption: Anhang
+:hide-uri-scheme:
+:chapter-signifier: 
+:hyphens:
+:docstatus: FrOSCon 2023 (edit)
+// :docstatus: Aktiv
+// :docstatus: Archiviert (inaktiv)
+:docdate: 08.04.2020
+:revnumber: 0.82
+:revdate: {localdate}
+:revremark: 
+// Filialdokumente einbinden
+:all-docs:
+// Filialdokumente ausschließen
+// :all-docs!:
+
+
+// übersetzen mit
+
+
+
+
+
+
+<<<
+:sectnums!:
+== Hinweise
+Diese Dokument ist die Zusammenfassung aller Dokumente zur Dokumentation der IT-Administration sowie der Datenschutzeinstellungen. Bestimmte Dokumentationen liegen als Einzeldokument vor. Dies wird mit einem rechtsbündig gesetzten Hinweis wie zum Beispiel +
+
+[.text-right]
+[.small]#Einzeldokument 90-01b-IT-InfrastrukturHauptsitz.pdf# 
+
+angezeigt. Diese sind 1:1 Teil dieser Gesamtdokumentation.
+Die Aufteilung in Einzeldokument dient der besseren Wartbarkeit und Revision der einzelnen Dokumentationen. Ebenso können einzelne Dokumente herausgegeben werden, ohne die gesamte Dokumentation – die auch Sicherheitsinformationen enthält – zur Verfügung stellen zu müssen.
+
+Die wichtigsten Abschnitte dieser Dokumentation stehen auch in BookStack-Wiki zur Verfügung und können dort mit der entsprechenden Berechtigung gelesen und ggf. bearbeitet werden.
+
+=== Legende
+TIP: Lösungsvorschlag
+
+NOTE: Notiz
+
+WARNING: Handlungsbedarf: Prüfen, Kostenanalyse / Gefährliche Aktion
+
+IMPORTANT: Hoher Handlungsbedarf / Sehr Gefährliche Aktion
+
+CAUTION: Dringender Handlungsbedarf / Extrem Gefährliche Aktion
+
+
+<<<
+
+<<<
+
+:sectnums:
+
+
+
+== IT-Sicherheitsmanagement
+include::90-11-IT-Sicherheitsmanagement.adoc[tag=image]
+[.text-right]
+[.small]#Einzeldokument 90-11-IT-Sicherheitsmanagement.pdf#
+
+ifdef::all-docs[]
+=== Basis-Absicherung
+include::90-11-IT-Sicherheitsmanagement.adoc[tag=main]
+endif::[]
+
+== IT-Sicherheitsrichtlinie
+[.text-right]
+[.small]#Einzeldokument 90-10-IT-Sicherheitsrichtlinie.pdf#
+
+=== Ziel dieser Richtlinie 
+ifdef::all-docs[]
+include::90-10-IT-Sicherheitsrichtlinie.adoc[tag=main]
+endif::[]
+
+=== Informations-Sicherheits-Analyse
+
+Zur Informations-Sicherheits-Analyse für kleine und mittlere Unternehmen siehe auch im Anhang »ISA+ Fragenkatalog Informations-Sicherheits-Analyse für kleine und  mittlere Unternehmen« des Bayerischer Sicherheitscluster e.V.
+
+[cols="1,4,1,4",options="header"]
+.Informations-Sicherheits-Analyse 
+|===
+|
+|ISA+ Frage
+|
+|Kommentar
+
+|1.
+|Gibt es eine dedizierte Leitlinie zur Informationssicherheit und ist sie von der Geschäftsführung unterschrieben?
+|icon:check[] +
+icon:pencil[]
+|siehe <<IT-Sicherheitsrichtlinie>>
+
+|2.
+|Gibt es einen Beauftragten für Informationssicherheit?
+|icon:check[]
+|Rainer-M. Fritsch +
+it-support@rmf.berlin
+
+
+|3.
+|Ist der Beauftragte für die Aufgabe geeignet?
+|icon:check[]
+|
+
+
+|4.
+|Ist ein notwendiger Datenschutzbeauftragter bestellt und hat dieser ein betriebliches Datenschutzkonzept erstellt?
+|icon:check[]
+|Rainer-M. Fritsch +
+dbs@rmf.berlin
+
+
+|5.
+|Besteht ein Überblick über die wichtigsten Anwendungen und IT-Systeme und deren Schutzbedarf?
+|icon:check[]
+|siehe Dokumente +
+90-01b-IT-InfrastrukturBuero.pdf +
+90-01c-IT-InfrastrukturWG.pdf +
+90-09-Wartung.pdf +
+90-09a-WartungCheckListe.pdf +
+90-12-TOM.pdf
+
+
+|6.
+|Gibt es Checklisten, was beim Eintritt neuer Mitarbeiter und beim Austritt von Mitarbeitern zu beachten ist?
+|icon:hourglass-start[]
+|
+
+
+|7.
+|Gibt es ein Konzept zur Informationssicherheit?
+|icon:check[]
+|siehe <<IT-Sicherheitsrichtlinie>>
+
+
+|8.
+|Gibt es Maßnahmen, welche die Informationssicherheit im Unternehmen gewährleisten?
+|icon:check[]
+|Strikte Beschränkung des Zugangs zu IT und Geschäftsinformationen; +
+mehrfache Absicherung der Zugänge durch Passwörter und SSH-Keys; +
+verschlossene Räume mit begrenztem Zugang nur für bestimmte Mitarbeitende, +
+regelmäßige Aufklärung der Mitarbeitenden
+
+
+|9.
+|Verfügen alle Mitarbeiter über ausreichend Kenntnisse, um Informationssicherheit zu gewährleisten?
+|icon:check[]
+|
+
+
+|10.
+|Werden alle Mitarbeiter angehalten, Sicherheitsvorfälle zu melden?
+|icon:check[]
+|
+
+
+|11.
+|Werden die Systeme bei Verlassen mit Bildschirmschoner und Kennwort gesichert?
+|icon:check[]
+|
+
+
+|12.
+|Gibt es eine Passwortrichtlinie?
+|icon:check[]
+|Alle Passwörter zur IT-Infrastruktur in der Geschäftsstelle, zum Netzwerk inkl. WLAN und zu den Servern werden durch zufällig gebildete Passwörter mit dem Passwortmanager KeePassXC abgesichert. +
+Zugang zu dieser KeePassXC-Datenbank haben nur die Geschäftsführung und der IT-Admin.
+
+
+|13.
+|Werden Festlegungen der Passwortrichtlinie technisch erzwungen?
+|icon:check[]
+|siehe Nr. 12
+
+
+|14.
+|Ist die private Nutzung von E-Mail und Internet im Unternehmen klar geregelt und existieren Merkblätter oder Hinweise zur sicheren Nutzung dieser Dienste?
+|icon:check[]
+|Die private Nutzung von E-Mail, Internet und IT-Technik für private Zwecke ist untersagt.
+
+
+|15.
+|Sind die Browser und E-Mail-Clients auf eine sinnvolle Sicherheitsstufe konfiguriert?
+|icon:check[]
+|Dies wird im Rahmen der regelmäßigen Wartung aller IT-Systeme regelmäßig überprüft.
+
+
+|16.
+|Erfolgt die Konfiguration einheitlich und kann sie nicht von den Nutzern geändert werden?
+|icon:check[]
+|Zugang zu Konfiguration und Software-Installation hat nur der IT-Admin. Alle User arbeiten nur mit nicht-administrativen Konten unter Windows 10 pro.
+
+
+|17.
+|Sind nicht benötigte Programme und Dienste auf Endgeräten deinstalliert bzw. deaktiviert und individuelle Erweiterungen abgesichert?
+|icon:check[]
+|
+
+
+|18.
+|Sind auf den Servern und aktiven Netzwerkgeräten alle unnötigen Programme deinstalliert und Dienste deaktiviert?
+|icon:check[]
+|
+
+
+|19.
+|Sind die eingesetzten Systeme (Betriebssysteme, Software, Browser etc.) auf dem neuesten Softwarestand und werden alle zutreffenden Sicherheitsupdates für die gesamte Software zeitnah eingespielt?
+|icon:check[]
+|Dies wird im Rahmen der regelmäßigen Wartung aller IT-Systeme regelmäßig überprüft. +
+Soweit möglich sind automatische Updates konfiguriert.
+
+
+|20.
+|Ist der Zugang zum WLAN abgesichert?
+|icon:check[]
+|
+
+
+|21.
+|Ist geregelt, welche Funktionen jeder Mitarbeiter nutzen darf und auf welche Datenbestände er zugreifen darf?
+|icon:check[]
+|Samba File Server mit Rechte-Matrix (siehe <<Rollen und Berechtigungen>>)
+
+
+|22.
+|Sind Rollen definiert und allen Systembenutzern entsprechend zugeordnet?
+|icon:check[]
+|siehe <<IT-Sicherheitsrichtlinie>>, <<Rollen und Berechtigungen>>
+
+
+|23.
+|Sind die Rechte entsprechend eingeschränkt?
+|icon:check[]
+|siehe <<IT-Sicherheitsrichtlinie>>, <<Rollen und Berechtigungen>>
+
+
+|24.
+|Sind Virenscanner auf den eingesetzten Systemen vorhanden?
+|icon:check[]
+|automatisch
+
+
+|25.
+|Werden regelmäßig in kurzen Abständen Aktualisierungen des Virenschutzes vorgenommen?
+|icon:check[]
+|
+
+
+|26.
+|Gibt es ein Merkblatt zum Schutz vor Schadsoftware?
+|icon:hourglass-start[]
+|
+
+
+|27.
+|Gibt es ein Merkblatt zum Verhalten beim Eintreten eines Vorfalls?
+|icon:hourglass-start[]
+|
+
+
+|28.
+|Sind die Merkblätter zum Schutz vor Schadsoftware und zum Verhalten beim Eintreten eines Vorfalls allen Mitarbeitern bekannt?
+|icon:hourglass-start[]
+|
+
+
+|29.
+|Ist das Unternehmensnetzwerk durch eine Firewall geschützt?
+|icon:check[]
+|Siehe https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-7490/57_Sicherheitsfunktionen-Firewall-der-FRITZ-Box/[Sicherheitsfunktionen (Firewall) der FRITZ!Box]
+
+
+
+|30.
+|Werden Konfiguration und Funktionsfähigkeit der Firewall regelmäßig kritisch überprüft und kontrolliert?
+|icon:hourglass-start[]
+|
+
+
+|31.
+|Besteht ein angemessener Schutz der IT-Systeme gegen Feuer, Überhitzung, Wasserschäden, Überspannung, Stromausfall und Einbruch?
+|icon:check[]
+|
+
+
+|32.
+|Ist der Zutritt zu IT-Systemen und Räumen geregelt?
+|icon:check[]
+|
+
+
+|33.
+|Werden Besucher, Handwerker, Servicekräfte etc. begleitet bzw. beaufsichtigt?
+|icon:check[]
+|
+
+
+|34.
+|Gibt es geeignete Vertretungsregelungen für Verantwortliche und sind die Vertreter mit ihren Aufgaben vertraut?
+|icon:hourglass-start[]
+|
+
+
+|35.
+|Sind die wichtigsten Passwörter für Notfälle sicher hinterlegt?
+|icon:check[]
+|Der Geschäftsführung wurde ein Sicherheitsstick mit einem verschlüsselten Container übergeben, in dem sich die KeePassXC-Datenbank und der dazugehörige Sicherheitskey befindet. Siehe Dokument +
+90-99_Sicherheitsstick.pdf
+
+
+|36.
+|Gibt es eine Liste mit Kontaktadressen für Notfälle?
+|icon:check[]
+|
+
+
+|37.
+|Gibt es ein Vorgehen bei Systemausfall bzw. Datenverlust (Notfallkonzept)?
+|icon:hourglass-start[]
+|
+
+
+|38.
+|Kennt jeder Mitarbeiter die Liste mit Kontaktadressen sowie das Vorgehen und sind diese gut zugänglich?
+|icon:hourglass-start[]
+|
+
+
+|39.
+|Werden Datenbestände regelmäßig gesichert?
+|icon:check[]
+|TrueNAS Server für Server-Backups; nächtliche verschlüsselte Sicherung der Dateien und Verzeichnisse auf ein externes Rechenzentrum.
+
+
+|40.
+|Werden die Datensicherungen geschützt aufbewahrt?
+|icon:check[]
+|
+
+
+|41.
+|Werden Informationen und Datenträger klassifiziert und dementsprechend gehandhabt?
+|icon:check[]
+|
+
+
+|42.
+|Werden Wartungsaufgaben durch geeignetes Personal durchgeführt?
+|icon:check[]
+|siehe Nr. 2 zugleich It-Admin
+
+
+|43.
+|Werden vertrauliche Informationen vor Wartungs- oder Reparaturarbeiten von Datenträgern oder IT-Systemen geschützt?
+|icon:check[]
+|
+
+
+|44.
+|Gibt es einen Überblick über vertragliche und gesetzliche Anforderungen an die Informationsverarbeitung?
+|icon:check[]
+|
+
+
+|45.
+|Gibt es eine Vorgabe für die Auslagerung von Daten an externe Service-Unternehmen?
+|icon:times[]
+|entfällt, da keine externen Dienstleister
+
+
+|46.
+|Sind den Mitarbeitern und den Informationsempfängern (Dienstleister etc.) die aus der Auslagerung von Daten resultierenden Sorgfaltspflichten bekannt bzw. kommuniziert?
+|icon:times[]
+|entfällt, da keine externen Dienstleister
+
+
+|47.
+|Wird geprüft, ob die Anforderungen eingehalten werden?
+|icon:times[]
+|entfällt, da keine externen Dienstleister
+
+
+|48.
+|Bestehen Regelungen, welche Daten wie lange gespeichert werden müssen bzw. dürfen?
+|icon:check[]
+|
+
+
+|49.
+|Gibt es eine Übersicht, in welcher Form Dritte beim IT-Betrieb beteiligt sind bzw. welche externen Leistungen genutzt werden?
+|icon:check[]
+|Auftragsverarbeitungsvertrag All-Inkl.com + 
+WEB.DE (E-Mail) + 
+Strato HiDrive (wird abgelöst durch eigene Nextcloud) + 
+Microsoft Office Business +
+google (Konten der Diensthandys) +
+Telekom Deutschland (ISP)
+
+
+|50.
+|Sind die aus Verträgen resultierenden sicherheitsrelevanten Anforderungen identifiziert und enthalten die eigenen Verträge entsprechende Regelungen?
+|icon:times[]
+|
+
+
+
+|===
+
+
+== Technische und organisatorische Maßnahmen (TOM) i.S.d. Art. 32 DSGVO
+[.text-right]
+[.small]#Einzeldokument 90-12-TOM.pdf#
+ifdef::all-docs[]
+include::90-12-TOM.adoc[tag=main]
+endif::[]
+
+// TODO: Netzwerkdiagramm einfügen
+== IT-Infrastruktur Übersicht
+// Quelle: ../diagrams/src/network.plantuml
+ifdef::all-docs[]
+image::diagrams/out/network/network-1.png[]
+endif::[]
+
+
+
+=== IT-Infrastruktur Geschäftsstelle Musterort
+[.text-right]
+[.small]#Einzeldokument 90-01b-IT-InfrastrukturBuero.pdf#
+ifdef::all-docs[]
+include::90-01b-IT-InfrastrukturBuero.adoc[tag=main]
+endif::[]
+
+Zur IT-Infrastruktur der Filialen siehe im Abschnitt <<IT-Infrastruktur der Filialen>>.
+
+=== Server
+==== Proxmox Virtual Environment (Server-Hardware)
+Proxmox ist eine Open-Source-Virtualisierungsplattform, die es ermöglicht, mehrere Betriebssysteme und Anwendungen auf einem einzigen physischen Server zu betreiben. Es wird hauptsächlich für die Virtualisierung von Servern und Workloads eingesetzt.
+
+Proxmox unterstützt sowohl KVM (Kernel-based Virtual Machine) als auch LXC (Linux Containers) und ermöglicht es Administratoren, Virtualisierungslösungen zu implementieren, die auf ihre spezifischen Bedürfnisse zugeschnitten sind. Dies kann die Verwaltung von IT-Infrastrukturen vereinfachen, die Kosten reduzieren und eine bessere Ressourcennutzung ermöglichen.
+
+Einige der Hauptmerkmale von Proxmox umfassen die Verwaltung von virtuellen Maschinen, die Überwachung von Ressourcen, die Unterstützung für verschiedene Speichertypen und die Möglichkeit, Backups und Snapshots zu erstellen. Es ist eine kosteneffektive Lösung für kleine und mittelständische Unternehmen, die Virtualisierungslösungen benötigen.
+
+
+=== Netzwerkverzeichnisse und Gruppen 
+==== Verzeichnisstruktur
+
+=== Rollen und Berechtigungen
+
+Alle Mitarbeitenden sind einer oder mehreren Gruppen (Rollen) zugewiesen und haben damit bestimmte Lese- und Schreibrechte auf dem File Server. Wer nicht die entsprechenden Berechtigungen hat kann Verzeichnisse einer anderen Gruppe weder sehen noch in diese schreiben. Änderungen an den Gruppen und Berechtigungen müssen mit dem IT-Admin abgestimmt und können nur von diesem angepasst werden.
+
+[cols="2,2,2,4",options="header"]
+.Gruppenzugehörigkeit der Mitarbeitenden je nach Position 
+|===
+|Mitarbeiter:in   
+|Rolle
+|Benutzername
+|Gruppenzugehörigkeit
+
+||||
+|===
+
+
+== IT-Sicherheit
+
+[[keepassxc]]
+=== KeePassXC – Passwortmanager 
+
+Der KeePassXC – Passwortmanager sichert alle Passwörter / Accounts der gesamten Prozesse der Recplast GmbH in einer Datenbank von KeePassXC gespeichert. 
+
+Der Datenbank-Name lautet: *_Recplastgmbh.kdbx_* 
+
+Das Passwort für die Datenbank wird an die Befugten per sicherem Messenger wie Signal übermittelt. 
+
+==== Schlüsseldatei
+
+Auf einem Stick wurde der Geschäftsführung die Datei "RecplastGmbH.key" übergeben. Diese wird neben dem Passwort benötigt, um die Datenbank "Recplastgmbh.kdbx" im <<keepassxc>> öffnen zu können. (Siehe auch 90-99-Sicherheitsstick.pdf)
+
+==== Gliederung Passwort-Datenbank 
+
+=== Konfiguration Fritz!Box-Router
+
+=== Dateiaustausch zwischen den Standorten
+
+=== Festplattenverschlüsselung
+
+=== Einstellungen Datenschutz Windows 10
+
+=== IT-Revision der Filialen
+==== IT-Sicherheitsüberprüfung
+
+==== IT-Revision der Filialen
+[.text-right]
+[.small]#Einzeldokument 90-01d-IT-RevisonWG.pdf#
+
+ifdef::all-docs[]
+include::90-01d-IT-RevisonWG.adoc[tag=main]
+endif::[]
+
+==== Zugelassene Software 
+- Firefox als Standardbrowser
+
+-   Chrome als zusätzlichen Browser
+
+-   Startpage als Standard-Suchmaschine
+
+-   LibreOffice als freies Office Paket mit Schreibprogramm,
+    Tabellenkalkulation und Präsentationsprogramm[@libreoffice]
+
+-   Adobe Acrobat Reader für PDF
+
+-   Scratch – Programmieren lernen für Kinder[@scratch]
+
+-   W10Privacy als Tool für Datenschutz und Privatsphäre[@w10privacy]
+
+-   AnyDesk für die Fernwartung[@anydesk]
+
+==== Freifunk-Router
+
+// TODO: Tabelle überprüfen
+[cols="3,2,2,3", options="header"]
+.IP-Adresse des jeweiligen Freifunk-Router mit Einsatzort 
+|===
+|Filiale            |Hardware     |Name Router   |Router-IP
+|Stammhaus             |Archer C 7   |Recplast02   |10.36.226.49
+|Forsthaus             |Archer C 7   |Recplast09   |10.230.124.113
+|Lübbener Str. 11      |AR 150       |Recplast08   |10.230.233.113
+|Lübbener Str. 13      |Archer C 7   |Recplast10   |10.230.126.161
+|Musterort 6a             |Archer C 7   |Recplast00   |10.230.7.241
+|Musterort               |Archer C 7   |Recplast03   |10.36.229.81
+|Musterort            |Archer C 7   |Recplast06   |10.230.7.225
+|Musterort            |Archer C 7   |Recplast01   |10.36.221.49
+|N.N.                  |Archer C 7   |Recplast04   |10.230.124.97
+|===
+
+
+== Server-Sicherheit
+
+
+
+=== Port-Freigaben in der Fritz!Box
+[CAUTION]
+====
+*_Es ist ausdrücklich verboten, in der Fritz!Box
+die Ports 80 oder 443 zu öffnen._*
+
+Der Zugriff von außen in das Netzwerk der Geschäftsstelle erfolgt ausschließlich per VPN und dann per SSH (SSH-Key) oder Webbrowser.
+====
+
+=== Zugriff auf den Server 
+Die Adminstration des Servers erfolgt über den User "it-admin"; das Passwort ist ebenso in der Datenbank des im <<keepassxc>>  wie das Passwort für den Superuser "root".
+
+Die Authentifizierung bei diesem Linux-Server per SSH erfolgt nur mit SSH-Schlüsseln. Ein Zugriff mit Passwort ist nur lokal im Büro Haus E – Serverraum möglich. Dazu muss ein Monitor und eine Tastatur angeschlossen werden.
+Der Server wird i. d. R. "headless" betrieben. Ein passender Monitor und eine Tastatur sind im Raum des IT-Admin im Haus D zu finden.
+
+=== Fernzugriff per VPN
+
+Der Zugriff von extern erfolgt ausschließlich per VPN und SSH. Seit der Version 7.5 bieten einige FritzBox-Router die Möglichkeit VPN-Tunnel mit Wireguard einzurichten. Das ist in den Routern der Geschäftsstelle bereits geschehen.
+
+
+== Regelmäßige Wartungsarbeiten
+
+[.text-right]
+[.small]#Einzeldokument 90-09-Wartung.pdf#
+
+ifdef::all-docs[]
+include::90-09-Wartung.adoc[tag=main]
+endif::[]
+
+[.text-right]
+[.small]#Einzeldokument 90-09a-WartungCheckListe.pdf#
+
+ifdef::all-docs[]
+include::90-09a-WartungCheckListe.adoc[tag=main]
+endif::[]
+
+== Backup des Servers und der lokalen PC
+
+=== Backup-Regeln
+
+*Die Mindestanforderungen für ein sicheres Backup sind*
+
+-   3--2--1-Regel beachten.
+
+-   3 Backups: Drei Kopien auf zwei Datenträgern, davon eine außer Haus.
+
+-   Eine Kopie der Dateien auf der lokalen Platte und zwei weitere auf zwei USB-Laufwerken speichern, von denen eine Kopie außerhalb des Gebäudes der Geschäftsräume aufbewahrt wird.
+
+-   Die externen Datenträger müssen alle verschlüsselt sein.
+
+*In der Recplast GmbH werden diese Regeln wie folgt umgesetzt:*
+
+-   4--4--3-Regel
+
+-   4 Backups: vier Kopien auf drei Datenträgern, davon zwei außer Haus
+
+-   Eine Kopie auf dem RAID1 des Servers footnote:[Das RAID1 ist aus Performance-Gründen nicht verschlüsselt, der Server
+befindet sich in einem verschlossenen Serverschrank.]
+
+-   Eine Kopie auf einem PC mit TruenNAS 
+
+-   Eine verschlüsselte Kopie außer Haus im Rechenzentrum (täglich nachts)
+
+-   Eine Kopie außer Haus bei der Geschäftsführerung in Musterstadt auf
+    mit Bitlocker verschlüsselten USB-Festplatten.
+
+
+=== Datensicherung auf externes Rechenzentrum
+[.text-right]
+[.small]#Einzeldokument 90-09b-BackupRclone.pdf#
+
+ifdef::all-docs[]
+include::90-09b-BackupRclone.adoc[tag=main]
+endif::[]
+
+=== Server-Backup auf TrueNAS
+
+=== Kein Backup der lokalen PC in der Geschäftsstelle
+
+WARNING: Ein Backup der lokalen Festplatte(n) der PC in der Geschäftsstelle gibt es nicht. Alle Daten sind auf den Netzlaufwerken in den entsprechenden Verzeichnissen zu speichern.
+
+=== Backup Personal- und Finanzbuchhaltung
+
+NOTE: Die IT der Sachbearbeitung Personal und Finanzen befindet sich derzeit (März 2023) in Umstellung auf einen Remote-Arbeitsplatz. Die Datensicherung z.Zt. mit c'tWIMage erfolgt auf eine externe USB-Festplatte und wird auf ein Notebook gespiegelt.footnote:[https://www.heise.de/select/ct/2021/10/2107507495973774776]
+
+
+=== Archivierung
+
+Das bisherige Archiv aller Dateien bis Ende 2020 befindet sich unter 
+
+==== Archiv bereinigen
+.Temporäre / unerwünschte Dateien löschen
+[source,bash,linenums]
+----
+find . -name '~$*.*' -delete
+find . -name '~WRL*.*' -delete
+find . -name '*.exe' -delete
+----
+
+Um <<python>> siehe Script im Anhang.
+
+
+
+Das gesamte Archiv wurde verschlüsselt mit *rclone* auf dem externer Server im Rechenzentrum abgelegt. Das Verzeichnis enthält das vollständige Archiv bis Ende 2020. 
+
+
+== Access- und Internet Service Provider
+
+=== Telekom
+==== Business-Account
+
+
+=== Verträge, Kosten, Laufzeiten
+
+== Telefonie und Fax
+
+== IT-Infrastruktur der Filialen
+[.text-right]
+[.small]#Einzeldokument 90-01c-IT-InfrastrukturWG.pdf#
+ifdef::all-docs[]
+include::90-01c-IT-InfrastrukturWG.adoc[tag=main]
+endif::[]
+
+
+== Smartphones
+
+=== Drittanbieterdienste sperren
+
+Wie kann ich Drittanbieter-Dienste sperren oder entsperren?
+
+Sie haben die Möglichkeit, Drittanbieter-Dienste für Ihren Mobilfunk-Vertrag zu verwalten, indem Sie diese selbst sperren oder entsperren. Dazu gehen Sie bitte wie folgt vor:
+
+. Loggen Sie sich im Kundencenter ein.
+
+. Klicken Sie auf "Vertragsdetails" bei dem Mobilfunk-Vertrag, bei dem Sie die Dienste verwalten möchten.
+
+. Scrollen Sie nach unten bis "Meine Rufnummer" und klicken Sie dort auf den Button "Drittanbietersperren verwalten".
+
+. Der Sperrkonfigurator öffnet sich und Sie können über den Button "Bearbeiten" die Drittanbieter sperren oder entsperren.
+
+Hinweis: Bei einer Sperre aller Drittanbieter-Dienste können z.B. auch Fahrscheine für den öffentlichen Personennahverkehr, Eintrittskarten oder Parkscheine nicht mehr per App über Ihre Mobilfunk-Rechnung bezahlt werden.
+
+
+=== Smartphone-Daten löschen
+
+[quote,Bundesamt für Sicherheit in der Informationstechnik]
+____
+Beachten Sie: Mit einem normalen Zurücksetzen auf die Werkeinstellungen ist eine Wiederherstellung Ihrer Daten oft weiterhin möglich. Wie Sie Ihre Daten richtig löschen, hat das Bundesamt für Sicherheit in der Informationstechnik https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Daten-sichern-verschluesseln-und-loeschen/Daten-endgueltig-loeschen/daten-endgueltig-loeschen_node.html[hier] zusammengestellt.
+
+Hinweis: Ob und wie Daten auf Ihrem Smartphones gelöscht werden können, ist je nach Gerät unterschiedlich. Aktuell gibt es kein einheitliches Verfahren oder Standards für ein sicheres Löschen auf Smartphones. Erkundigen Sie sich gegebenenfalls individuell bei dem Hersteller des Gerätes, wie Sie beim Löschen vorgehen sollten.
+____
+
+=== Google Konten der Smartphones
+
+Alle Passwörter befinden sich in der Datenbank des <<keepassxc>>. Das jeweilige Google-Konto kann über <https://accounts.google.com> erreicht werden.
+
+
+==== Google-Konten Datenschutz/Wiederherestellung 
+
+Als Wiederherstellungskonto wird das E-Mail-Konto bei All-inkl.com handy@Recplastgmbh.de genutzt. (Benutzer: m054ea06, Passwort wie unter https://kas.all-inkl.com -> E-Mail -> E-Mail-Postfach hinterlegt.
+
+
+
+== Software
+=== Windows 10
+=== Windows 11
+=== Microsoft Office 365 Business Standard 
+
+==== Hauptkonto 
+
+Für das Microsoft Office 365 Business Abonnement wurde neu ein Microsoft-Konto auf der Basis der E-Mail-Adresse y.hey@Recplastgmbh.de eingerichtet.
+
+Microsoft (MS) verwaltet das Organisationskonto für die Abonnements und das Adminkonto unter unterschiedlichen Webadressen, aber mit den gleichen Konto-Zugangsdaten. Im Grunde orientiert sich die Verwaltung und Administration am Business-Premium-Paket, ist dann aber für Business Standard nur eine abgespeckte Version.  
+
+==== Lizenzen
+
+Es wurden 5 Lizenzen erworben, die monatlich jeweils zum 20. eines Monats per Bankeinzug abgerechnet werden. Die Rechnungen sind unter <https://admin.microsoft.com/Adminportal/Home?source=applauncher#/billoverview/invoice-list>
+zu finden.
+
+Die Rechnung enthält eine Zusammenfassung der Belastungen und die Zahlungsanweisungen und kann im Microsoft 365 Admin Center angezeigt werden. Diese können auch im PDF-Format (Portable Document Format) heruntergeladen werden. Diese Aufgabe erledigt der IT-Admin und sendet die Rechnung als PDF an Frau Krüger.
+
+===== Adminstration Benutzer und Lizenzen 
+
+Damit Mitarbeiter sich nicht mit persönlichen Konten bei MS registrieren und anmelden müssen, wurden unter der Web-Adresse "Recplastgmbh.de" E-Mai-Weiterleitungen ausschließlich für die Nutzung der Office 365
+Lizenzen eingerichtet. 
+Für alle MS-Kontos gilt das gleiche Passwort.Alle Passwörter sind in einer Datenbank des <<keepassxc>> gespeichert. Alle E-Mail-Weiterleitungen beginnend mit "office...@Recplastgmbh.de" verweisen auf das E-Mail-Konto it-admin@Recplastgmbh.de. Zu jeder Lizenz gehört auch die Nutzung von Microsoft Teams.
+
+[cols="1,2,2,3,2",options="header"]
+.Benutzer und Lizenzen
+|===
+|Lizenz   |Benutzer  |Anzeigename  |Benutzername      |Geräte
+|1||||
+|2||||
+|3||||
+|4||||
+|===
+
+
+=== Administration Konto-Einstellungen 
+
+Um auch hier bei Microsoft Geschäftsführungsaufgaben von IT-Admin zu trennen, könnte auch ein Administrator-Konto eingerichtet werden, der die Office-Angelegenheiten verwaltet. Für 5 Lizenzen vielleicht nicht wirklich notwendig. Ein Admin für die Office-365-Lizenzen kann auch ohne eigene Office-Lizenz im Microsoft-Konto eingerichtet werden, so dass keine weiteren Mehrkosten entstehen würden.
+
+Das Microsoft-Hauptkonto und die Benutzerkonten sind mit Zwei-Faktor-Authentifizierung geschützt. der zweite Faktor ist derzeit (Stand März 2021) das persönliche Smartphone des IT-Admin.
+
+MS-Konto Recplast GmbH::   <https://portal.office.com/account/?ref=MeControl>
+
+Admin-Portal::   <https://admin.microsoft.com/Adminportal/#/homepage>
+
+Azure-Portal allgemein::   <https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview>
+
+Verwaltung der registrierten Geräte::   <https://portal.azure.com/#blade/Microsoft_AAD_Devices/DevicesMenuBlade/Devices/menuId/>
+
+==== Abrechnung der Lizenzen Microsoft 365
+
+Die Abrechnung der fünf MS Office 365 Lizenzen erfolgt jeweils zum 22. eines Monats. Der Rechnungsbetrag wird vom Geschäftskonto abgebucht. Die Abrechnungsbenachrichtigung erfolgt an das E-Mail-Konto …
+
+==== Installierte Programme (App)
+
+Von der Vielzahl der Applikationen (mehr als 30 App) von Microsoft Office 365 Business Standard wurden ausschließlich installiert:
+
+-   Word
+
+-   Excel
+
+-   PowerPoint
+
+-   Access
+
+OneDrive wurde auf allen Rechnern im Büro Musterort deinstalliert, da eine DSGVO-konforme Nutzung bei personenbezogenen Daten nicht gesichert ist. 
+
+Dies gilt insbesondere bei der Nutzung der Cloud-Produkte von Office 365. Deshalb wurden weder auf mobilen Endgeräten noch Web-basierte Anwendungen von Office 365 installiert.Diese sollten auf keinen Fall auf Smartphones, Tablets nachinstalliert werden.
+
+
+=== Win10 Privacy
+
+=== Thunderbird 
+
+[.text-right]
+[.small]#Einzeldokument 90-91-thunderbird.pdf#
+ifdef::all-docs[]
+include::90-91-thunderbird.adoc[tag=main]
+endif::[]
+
+
+
+
+// :sectnums!:
+
+ifdef::all-docs[]
+[appendix]
+== Verpflichtungserklärung auf Vertraulichkeit und Verschwiegenheit
+
+[.text-right]
+[.small]#Einzeldokument 40-49_Mitarbeitende/40-01_verpflichtung_vertraulichkeit.pdf# 
+
+
+include::40-01_verpflichtung_vertraulichkeit.adoc[tag=main]
+endif::[]
+
+ifdef::all-docs[]
+[appendix]
+== Merkblatt zu Verpflichtungserklärung auf Vertraulichkeit und Verschwiegenheit
+
+[.text-right]
+[.small]#Einzeldokument 40-49_Mitarbeitende/40-01a_anhang-verpflichtung_vertraulichkeit.pdf# 
+include::40-01a_anhang-verpflichtung_vertraulichkeit.adoc[tag=main]
+endif::[]
+
+ifdef::all-docs[]
+[appendix]
+== Eidesstattliche Versicherung bei Ausscheiden aus dem Unternehmen
+
+[.text-right]
+[.small]#Einzeldokument 40-49_Mitarbeitende/40-01b_eidesstattliche-versicherung.pdf#
+
+include::40-01b_eidesstattliche-versicherung.adoc[tag=main]
+endif::[]
+
+
+ifdef::all-docs[]
+[appendix]
+== ISA+ Fragenkatalog Informations-Sicherheits-Analyse für kleine und  mittlere Unternehmen
+
+[.text-right]
+[.small]#Einzeldokument 90-11a-ISAplus.pdf# +
+Quelle: Bayerischer Sicherheitscluster e.V. vom November 2019
+
+// :sectnums!:
+include::90-11a-ISAplus.adoc[tag=main]
+endif::[]
+
+
+
+<<<
+
+<<<
+ifdef::all-docs[]
+[appendix]
+== Automatische Updates für Linux Server
+// include::90-21-Unattended-Upgrades.adoc[tag=main]
+
+[source,python]
+----
+include::./scripts/uu-mailtest.py[tag=main]
+----
+endif::[]
+
+
+<<<
+
+[.text-right]
+[.small]#Einzeldokument 90-90_anleitung-asciidoctor.pdf#
+ifdef::all-docs[]
+include::90-90_anleitung-asciidoctor.adoc[tag=main]
+endif::[]
+
+.Beispiel-Theme für diese Dokumentation
+
+[.text-right]
+[.small]#Einzeldokument ../resources/themes/froscon-theme.yml#
+
+[source,yaml,linenums]
+ifdef::all-docs[]
+----
+include::../ressources/themes/froscon-theme.yml[]
+----
+endif::[]
+<<<
+
+
+[cols="2,5,3", options="header"]
+.Dokumentenmanagement
+|===
+|Nr.
+|Anlage bzw. Verweis auf weitere Dokumente
+|Dok.-Nr./Anmerkung
+
+|
+|
+|
+
+|===
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+[.text-right]
+[.small]#Version: {revnumber} ({revremark}) vom {revdate} | Status: {docstatus}#

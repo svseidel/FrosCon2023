@@ -1,0 +1,376 @@
+= Dokumentation und Dokumentenmanagement
+:asciidoc-version: 2.0.20 [https://asciidoctor.org]
+:author: RMF 
+:email: dsb@rmf.berlin
+:source-highlighter: rouge
+:lang: de
+:icons: font
+:docdate: 03.05.2020
+:docstatus: In Bearbeitung
+// :docstatus: Aktiv
+// :docstatus: Archiviert (inaktiv)
+// :docstatus: Sonstiges
+:revnumber: 0.8
+:revdate: {localdate}
+:revremark: 
+:last-update-label: zuletzt geändert: 
+:includedir: _includes
+:sourcedir: /Users/webmaster/Documents/99_Vortrag/FrosCon2023/ressources/themes/
+:table-caption: Tabelle
+:listings-caption: Quellcode
+:toc-title: Inhalt
+:toc:
+:asciidoc-file: 90-90_anleitung-asciidoctor.adoc
+:hyphens:
+
+// übersetzen mit
+// asciidoctor-pdf -a pdf-themesdir=/Users/webmaster/Documents/asciidoc/resources/themes -a pdf-theme=book -a pdf-fontsdir=/Users/webmaster/Documents/asciidoc/resources/fonts -a hyphens=de 90-90_anleitung-asciidoctor.adoc
+
+// tag::main[]
+== Software für diese Dokumentation
+Für die Dokumentation werden freie und quelloffene Softwareprodukte eingesetzt. Alle Dokumenten-Formate sind für Menschen lesbar und können leicht angepasst werden.
+
+=== Werkzeuge
+
+- Asciidoctor – eine Textverarbeitungs- und Veröffentlichungs-Toolchain, die es Ihnen ermöglicht, Textdokumente mit einer einfachen Textformatierungssyntax zu schreiben und sie dann in verschiedene Ausgabeformate wie Word, HTML, PDF, EPUB und andere zu konvertieren. 
+// - HTML5 und CSS für das Dokumentenmanagementsystem
+- Visual Studio Code – ein freier Editor für die  Betriebssysteme Windows, MacOS und Linux
+- git als Versionskontrollsystem
+// - ggf. LaTeX für größere Druckwerke
+
+- Pandoc – ein freier und quelloffener Dokumentenkonverter, mit dem Sie Dokumente von einem Format in ein anderes konvertieren können. 
+
+
+Alle Werkzeuge sind installiert, so dass Sie in die Lage versetzt sind, die Dokumentation selbst zu pflegen.
+
+
+=== Was ist AsciiDoc?
+
+AsciiDoc ist eine leichtgewichtige Auszeichnungssprache, die ähnlich wie Markdown zur Erstellung von Dokumenten und Textdateien verwendet wird. AsciiDoc ist besonders nützlich für die Dokumentation von Softwareprojekten und technischen Anleitungen, da es einfach zu lesen und zu schreiben ist und es Entwicklern und Technikern ermöglicht, schnell und einfach Dokumentationen zu erstellen und zu aktualisieren. 
+
+AsciiDoc verwendet einfache Textdateien mit einer einfachen Syntax, die mit Tools wie Asciidoctor leicht in andere Formate konvertiert werden können. Es ist ein offenes Format, das von einer großen Community unterstützt wird, und es gibt eine Vielzahl von Tools und Plugins, die mit AsciiDoc arbeiten.
+
+Im Gegensatz zu MS Word, das ein proprietäres Format von Microsoft ist, ist AsciiDoc ein offenes Format, das von vielen Anwendungen und Texteditoren unterstützt wird. Dies bedeutet, dass Sie Dokumente in AsciiDoc erstellen können, die auf verschiedenen Plattformen und in verschiedenen Anwendungen geöffnet werden können, ohne dass spezielle Software erforderlich ist.
+
+Ein weiterer Vorteil von AsciiDoc ist, dass es eine klare Trennung zwischen Inhalt und Formatierung gibt. Sie können sich auf das Schreiben des Inhalts konzentrieren, während das Aussehen des Dokuments später durch eine separate Formatierung definiert wird. Dies ist im Gegensatz zu Word, wo die Formatierung oft im Dokument selbst enthalten ist und Änderungen an der Formatierung oft unerwartete Auswirkungen auf den Text haben können.
+
+// AsciiDoc bietet auch eine einfache Syntax, die leicht zu erlernen und zu verwenden ist. Mit AsciiDoc können Sie schnell und einfach Dokumente erstellen, die leicht zu lesen und zu verstehen sind. Es gibt auch viele Tools und Plugins, die mit AsciiDoc arbeiten, wie z.B. Konverter, die AsciiDoc-Dokumente in andere Formate wie HTML oder PDF konvertieren können.
+
+Insgesamt bietet AsciiDoc viele Vorteile gegenüber MS Word, insbesondere für die Erstellung von technischen Dokumentationen und Handbüchern. Es ist einfach zu erlernen und zu verwenden, unterstützt ein offenes Format und bietet eine klare Trennung zwischen Inhalt und Formatierung, was zu effektiveren und professionelleren Dokumenten führt.
+
+=== Was ist AsciiDoctor?
+Asciidoctor ist eine Implementierung der AsciiDoc-Textauszeichnungssprache. Es ist ein Open-Source-Tool, das zur Erstellung von Dokumentationen, Handbüchern, technischen Dokumenten und anderen Arten von Dokumenten verwendet wird.
+
+Asciidoctor bietet eine umfangreiche Palette von Funktionen, die über die Grundfunktionen von AsciiDoc hinausgehen. Dazu gehören Funktionen wie automatische Abschnittsnummerierung, Querverweise, Inhaltsverzeichnisse, Indexierung und die Integration von Code-Snippets und Diagrammen.
+
+Asciidoctor bietet auch eine Reihe von Ausgabeformaten, darunter HTML, PDF, EPUB, DocBook und andere. Es gibt auch viele Plugins und Erweiterungen für Asciidoctor, die zusätzliche Funktionen und Integrationen mit anderen Tools bieten.
+
+Ein weiterer Vorteil von Asciidoctor ist, dass es eine aktive Community von Entwicklern und Benutzern gibt, die ständig an der Verbesserung und Weiterentwicklung des Tools arbeiten. Es gibt auch eine umfangreiche Dokumentation und viele Ressourcen zur Unterstützung der Benutzer bei der Verwendung von Asciidoctor.
+
+Insgesamt ist Asciidoctor ein leistungsfähiges und flexibles Tool zur Erstellung von Dokumentationen und anderen Arten von Dokumenten. Es bietet viele Funktionen, die über die Grundfunktionen von AsciiDoc hinausgehen, sowie eine breite Palette von Ausgabeformaten und Erweiterungen. Mit einer aktiven Community und umfangreichen Ressourcen ist Asciidoctor eine beliebte Wahl für Entwickler, Autoren und andere Benutzer, die hochwertige Dokumentation erstellen möchten.
+
+=== Was ist Pandoc
+Pandoc ist ein freier und quelloffener Dokumentenkonverter, mit dem Sie Dokumente von einem Format in ein anderes konvertieren können. 
+
+Pandoc unterstützt eine breite Palette von Eingabe- und Ausgabeformaten, darunter HTML, Markdown, LaTeX, PDF, EPUB, Microsoft Word und viele mehr. Es kann Dokumente von einem Format in ein anderes konvertieren und auch andere Aufgaben wie die Erstellung eines Inhaltsverzeichnisses, die Nummerierung von Gleichungen und vieles mehr übernehmen.
+
+Pandoc hat eine Befehlszeilenschnittstelle, kann aber auch mit grafischen Benutzeroberflächen verwendet und in andere Softwareanwendungen integriert werden. Pandoc wird häufig von Akademikern, Autoren und Verlegern verwendet, um Dokumente zwischen verschiedenen Formaten zu konvertieren, und ist durch die Verwendung von Erweiterungen und Filtern in hohem Maße anpassbar.
+
+
+=== Arbeitsschritte (DocToolChain)
+Eine DocToolChain ist ein Satz von Werkzeugen und Arbeitsabläufen, die zur Verwaltung des Prozesses der Erstellung, Bearbeitung und Veröffentlichung von Dokumentation verwendet werden. Sie umfasst in der Regel eine Kombination von Software-Tools, Dateiformaten und bewährten Verfahren, die zur Rationalisierung und Automatisierung verschiedener Aspekte des Dokumentationsprozesses eingesetzt werden.
+
+Eine DocToolChain kann Tools wie Texteditoren, Versionskontrollsysteme, Dokumentationsgeneratoren, Veröffentlichungstools und vieles mehr umfassen. Die spezifischen Werkzeuge und Arbeitsabläufe, die in einer DocToolChain verwendet werden, können je nach den Bedürfnissen der Organisation oder des Projekts variieren, aber das allgemeine Ziel ist es, den Prozess der Erstellung und Pflege der Dokumentation so effizient und effektiv wie möglich zu gestalten.
+
+Die Verwendung einer DocToolChain kann mehrere Vorteile haben, darunter eine verbesserte Zusammenarbeit, eine bessere Versionskontrolle, schnellere Dokumentationsaktualisierungen und eine einheitlichere Dokumentationsqualität. Durch die Einrichtung eines standardisierten Satzes von Tools und Arbeitsabläufen kann eine DocToolChain auch dazu beitragen, Fehler zu reduzieren und den Zeit- und Arbeitsaufwand für die Verwaltung der Dokumentation zu minimieren.
+
+==== Asciidoc-Dateien bearbeiten
+
+- VS Code mit Erweiterungen AsciiDoc und git
+
+==== Asciidoc-Dateien konvertieren
+
+Ersetzen Sie »quellDatei« mit dem Dateinamen Ihrer Datei. Als »zielDatei« sollten Sie den gleichen Dateinamen verwenden wie in »quellDatei«; Sie können aber auch einen beliebigen anderen Dateinamen als Ziel wählen.
+
+===== asciidoc -> PDF
+
+[source,bash]
+.Einfacher Aufruf
+----
+asciidoctor-pdf quellDatei.adoc
+----
+
+[source,bash]
+.Aufruf mit Theme und Schriftauswahl
+----
+asciidoctor-pdf -a pdf-themesdir=/Users/webmaster/Documents/asciidoc/resources/themes -a pdf-theme=isb -a pdf-fontsdir=/Users/webmaster/Documents/asciidoc/resources/fonts quellDatei.adoc
+----
+
+===== asciidoc -> markdown
+
+[source,bash]
+.adoc nach Markdown
+----
+asciidoctor -b docbook quellDatei.adoc 
+pandoc -f docbook -t markdown_strict quellDatei.xml -o quellDatei.md
+----
+
+===== Import markdown in BookStack
+
+==== asciidoc -> Word (*.docx)
+
+Hierfür sind zwei Schritte nötig:
+
+[source,bash] 
+.adoc nach XML konvertieren
+----
+asciidoctor -b docbook dateiname.adoc 
+----
+
+[source,bash]
+.XML nach Word konvertieren
+----
+pandoc -r docbook -t docx -o dateiname.docx dateiname.xml
+----
+
+Dieser Prozess kann automatisiert werden, wenn entsprechende _Tasks_ in VS Code in der Datei `tasks.json` angelegt wurden.
+
+Im Task _ascidoctor-pdf_ wird die aktuell geöffnete Datei in VS Code  über eine XML-Datei als ein Word-Dokument im Format .DOCX ausgegeben.
+
+Im Task _ascidoc2Word_ wird die aktuell geöffnete Datei in VS Code mit dem Theme _book_ und den im Theme festgelegten Fonts zu einem PDF kompiliert.
+
+[source,json,linenums]
+.Datei tasks.json
+----
+include::../.vscode/tasks.json[tag=main]
+----
+
+
+<<<
+  
+=== AsciiDoc Theme anpassen
+
+==== Verzeichnisstruktur
+
+
+.Verzeichnisbaum
+[source,yaml,linenums]
+----
+asciidoc/
+  resources/
+    themes/
+      ihrtheme-theme.yml
+    fonts/
+      sourcesanspro-normal.ttf
+      sourcesanspro-italic.ttf
+      sourcesanspro-bold.ttf
+      sourcesanspro-bold_italic.ttf
+----
+
+WARNING: Der Bindestrich vor theme.yml ist reserviert und darf nicht weggelassen werden.
+
+<<<
+==== übersetzen mit
+Im Terminal folgenden Befehl ggf. auf den  Dateinamen Ihres adoc-Dokuments anpassen, einsetzen und ausführen. +
+Für diese Datei (_{asciidoc-file}_) lautet der Befehl:
+
+[source,bash]
+----
+asciidoctor-pdf -a pdf-themesdir=/Users/webmaster/Documents/99_Vortrag/FrosCon2023/ressources/themes/ -a pdf-theme=isb -a pdf-fontsdir=/Users/webmaster/Documents/99_Vortrag/FrosCon2023/ressources/fonts 90-90_anleitung-asciidoctor.adoc
+----
+
+// end::main[]
+
+<<<
+==== Beispiel-Theme
+// Siehe <<themingguide>>
+
+.Beispiel-Theme für diese Anleitung
+[source,yaml,linenums]
+----
+include::{sourcedir}dsb-theme.yml[]
+----
+
+== Anhang
+== Installation
+=== Vorbereitungen Linux
+Zur Installation von *_AsciiDoctor_* unter Linux sehen Sie bitte für die verschieden Linux-Distributionen  unter diesem Link nach:
+https://asciidoctor.org/docs/user-manual/#installing-the-asciidoctor-ruby-gem
+
+Zur Installation von *_git_* unter Linux sehen Sie bitte für die verschieden Linux-Distributionen  unter diesem Link nach:
+https://git-scm.com/download/linux
+
+=== Vorbereitungen Windows
+
+- git – Versionskontrollsystem
+https://git-scm.com/downloads/win (64-bit) installieren
+
+- Adobe Acrobat Reader DC installieren
+
+- Install rubyinstaller for windows 
+https://rubyinstaller.org/downloads
+recommended Ruby+Devkit 2.6.6-1 (x64)
+
+==== Arbeiten im Terminal (Eingabeaufforderung)
+
+Danach ein Terminal (Eingabeaufforderung) öffnen und folgende Befehle eingeben:
+[source,bash]
+----
+gem install asciidoctor
+----
+
+Test mit 
+[source,bash]
+----
+asciidoctor --version
+----
+
+Dann asciidoctor-pdf installieren
+[source,bash]
+----
+gem install asciidoctor-pdf --pre
+----
+
+Test mit 
+[source,bash]
+----
+gem which asciidoctor-pdf
+----
+
+=== Vorbereitungen MacOS
+
+Mit Homebrew:
+
+Bevor Homebrew installiert werden kann, muss Xcode (die Entwicklungsumgebung von Apple) installiert sein.
+
+Im Mac App Store nach Xcode suchen und installieren. Das dauert mindestens einmal Kaffee- oder Teekochen.
+
+Dann weiter im Terminal:
+[source,bash]
+----
+xcodebuild -license
+----
+und die Xcode-Lizenz annehmen.
+
+Dann weiter Homebrew installieren im Terminal mit
+
+[source,bash]
+----
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+----
+
+Ganze Zeile inklusive der Anführungszeichen kopieren und im Terminal ausführen.
+
+Prüfen, ob Homebrew korrekt installiert ist,
+[source,bash]
+----
+brew doctor
+----
+
+ggf. Hinweise, die ausgegeben werden befolgen.
+
+Nun kann Asciidoctor wie folgt installiert werden 
+[source,bash]
+----
+brew install asciidoctor
+----
+
+Jetzt prüfen, ob Asciidoctor installiert ist:
+[source,bash]
+----
+asciidoctor -v
+----
+
+Wenn die Versionsnummer angezeigt wird, dann ist alles korrekt eingerichtet.
+
+Jetzt noch Asciidoctor-pdf installieren:
+[source,bash]
+----
+gem install asciidoctor-pdf
+----
+
+Prüfen mit 
+[source,bash]
+----
+gem which asciidoctor-pdf
+----
+
+Damit sind die Vorbereitungen auf Betriebssystemebene getroffen.
+
+
+=== Editor VS Code installieren und einrichten
+Visual Studio Code (VS Code)
+https://code.visualstudio.com/download
+
+In Visual Studio Code folgende Erweiterungen installieren:
+
+- German Language Pack for Visual Studio Code
+- AsciiDoc 2.7.15
+- Code Spell Checker
+- German - Code Spell Checker
+
+
+==== Versionskontrolle einrichten
+
+Visual Studio Code starten und das Verzeichnis öffnen, in dem sich die Dokumentation befindet oder künftig gespeichert werden soll.
+
+Dann mit Menü -> Terminal -> [Neues Terminal] ein Terminalfenster öffnen. 
+Hier folgenden Befehl eingeben: 
+[source,bash]
+----
+git init
+----
+
+Damit ist das git-repository initialisiert und kann innerhalb von VS Code  die Versionsverwaltung einfach benutzt werden (3. Symbol von oben in der linken Seitenleiste).
+
+Mit Menü -> Datei -> [Arbeitsbereich speichern unter] einen Arbeitsbereich (.code-workspace) für Ihre Dokumentation anlegen.
+
+Das war's. Jetzt können Sie mit Ihrer Dokumentation beginnen…
+
+
+[.text-right]
+[.small]#Datei: {asciidoc-file} 
+Version: {revnumber} +
+ zuletzt geändert: {revdate} (Notiz: {revremark}) 
+(initial: {docdate})#
+
+
+<<<
+=== Web-Links Dokumentation zu AsciiDoctor
+
+Asciidoctor Documentation:
+https://asciidoctor.org/docs/
+
+AsciiDoc Syntax Quick Reference:
+https://asciidoctor.org/docs/asciidoc-syntax-quick-reference
+
+Asciidoctor User Manual:
+https://asciidoctor.org/docs/user-manual/
+
+// [#themingguide]
+
+Asciidoctor PDF Theming Guide:
+https://github.com/asciidoctor/asciidoctor-pdf/blob/v1.5.0.beta.7/docs/theming-guide.adoc
+
+
+
+=== Dokumentenmanagement
+[cols="1,5,2", options="header"]
+.Dokumentenmanagement
+|===
+|Nr.
+|Anlage bzw. Verweis auf weitere Dokumente
+|Dok.-Nr./Anmerkung
+
+|
+|
+|
+
+|===
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+[.text-right]
+[.small]#Version: {asciidoc-file} {description} {revnumber} ({revremark}) vom {revdate} | Status: {docstatus}#

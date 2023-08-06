@@ -1,0 +1,134 @@
+= Checkliste Wartungsarbeiten
+:asciidoc-version: 2.0.20 [https://asciidoctor.org]
+:author: RMF 
+:email: it-support@rmf.berlin
+:author: RMF 
+:source-highlighter: rouge
+:lang: de
+:icons: font
+:doctype: article
+// :docstatus: In Bearbeitung
+// :docstatus: Aktiv
+// :docstatus: Archiviert (inaktiv)
+:docstatus: adoc-Vorlage
+:asciidoc-file: .adoc
+:docdate: 23.03.2023
+:revnumber: 0.1
+:revdate: 23.03.2023
+:revremark: Initial
+:last-update-label: zuletzt geändert: 
+:table-caption: Tabelle
+:toc-title: Inhalt
+:toc:
+:toclevels: 4
+
+// übersetzen mit
+// asciidoctor-pdf -a pdf-themesdir=/Users/webmaster/Documents/asciidoc/resources/themes -a pdf-theme=dsb -a pdf-fontsdir=/Users/webmaster/Documents/asciidoc/resources/fonts .adoc
+
+// TODO: Checkliste Wartungsarbeiten überarbeiten
+
+// tag::CheckListe[]
+== Wartungsarbeiten – Checkliste 
+=== Server 
+// tag::main[]
+*node* ist die oberste Ebene in Proxmox; hier »Datacenter Recplast«.
+
+*pve* ist die Hardware auf der Proxmox installiert ist.
+
+
+[cols="1,3,3,3", options="header"]
+.Checkliste wöchentliche Wartungsarbeiten
+|===
+|icon:check[]
+|Server
+|Aufgabe
+|Tool
+
+||||
+
+|===
+
+[cols="1,3,3,3", options="header"]
+.Checkliste monatliche Wartungsarbeiten
+|===
+|icon:check[]
+|Server
+|Aufgabe
+|Tool
+
+||||
+|===
+
+
+=== Weitere Wartungsarbeiten
+
+[cols="1,3,3,3", options="header"]
+.Checkliste regelmäßige Wartungsarbeiten
+|===
+|icon:check[]
+|Was
+|Aufgabe
+|Tool
+
+|
+|KeePassXC-Datenbank
+|Datensicherung der Datenbank auf den Server bei All-inkl.com
+|``
+scp …
+``
+
+|
+|funktioniert Unattended-Upgrade?
+|Nach einigen Tagen auch mal die Log-Datei prüfen:
+|`cat /var/log/unattended-upgrades/unattended-upgrades.log`
+
+|===
+
+
+
+[cols="1,3,3,3", options="header"]
+.Checkliste gelegentliche Wartungsarbeiten
+|===
+|icon:check[]
+|Art
+|Aufgabe
+|Tool
+
+||||
+
+|===
+
+
+
+=== Firmware-Updates Drucker
+
+Mit der automatischen Aktualisierung der Firmware versuchen Druckerhersteller Tintenpatronen / Toner von Drittherstellern auszusperren. Daher ist die automatische Aktualisierung der Firmware ab Werk in der Regel eingeschaltet.
+
+Bei allen Druckern wird die automatische Aktualisierung der Firmware daher händisch ausgeschaltet. Sollte die Aktualisierung der Firmware versehentlich eingeschaltet werden, könnten die aktuellen Patronen / Toner und die entsprechenden Vorräte unbrauchbar werden.
+
+Bei den Druckern also immer wieder überprüfen, ob die Firmware-Aktualisierung weiterhin abgeschaltet ist.
+
+// end::main[]
+// end::CheckListe[]
+
+
+
+[cols="2,5,3", options="header"]
+.Dokumentenmanagement
+|===
+|Nr.
+|Anlage bzw. Verweis auf weitere Dokumente
+|Dok.-Nr./Anmerkung
+
+|
+|
+|
+
+|===
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+[.text-right]
+[.small]#Version: {revnumber} ({revremark}) vom {revdate} | Status: {docstatus}#

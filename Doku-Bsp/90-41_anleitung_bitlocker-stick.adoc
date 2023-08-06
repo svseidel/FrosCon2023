@@ -1,0 +1,267 @@
+= USB-Stick mit Bitlocker verschlüsseln
+:asciidoc-file: .adoc
+:asciidoc-version: 2.0.20 [https://asciidoctor.org]
+:author: RMF 
+:docdate: 28.03.2023
+// :docstatus: In Bearbeitung
+:docstatus: Aktiv
+// :docstatus: Archiviert (inaktiv)
+:doctype: article
+:email: it-support@rmf.berlin
+:icons: font
+:lang: de
+:imagesdir: ./img/
+:last-update-label: zuletzt geändert: 
+:listings-caption: Quellcode
+:revdate: {localdate}
+:revnumber: 1.0
+:revremark: BitLocker-Verschlüsselung
+:source-highlighter: rouge
+:table-caption: Tabelle
+:figure-caption: Abb.
+:toc-title: Inhalt
+:toc:
+:toclevels: 3
+:sectnums:
+// :docstatus: Sonstiges
+
+
+// übersetzen mit
+// asciidoctor-pdf -a pdf-themesdir=/Users/webmaster/Documents/asciidoc/resources/themes -a pdf-theme=isb -a pdf-fontsdir=/Users/webmaster/Documents/asciidoc/resources/fonts 90-41_anleitung_bitlocker-stick.adoc
+
+// tag::main[]
+== Was ist Bitlocker?
+BitLocker ist eine Funktion im Windows-Betriebssystem, die eine Festplattenverschlüsselung für den Datenschutz bietet. 
+
+BitLocker verschlüsselt Festplatten oder USB-Sticks und schützt somit die darauf gespeicherten Daten vor unbefugtem Zugriff, selbst wenn die Festplatte / der USB-Stick gestohlen oder verloren geht. 
+
+Bei der Verwendung von BitLocker wird ein Kennwort festgelegt, das beim Einstecken des USB-Stick eingegeben werden muss, um den USB-Stick zu entschlüsseln. 
+Dadurch wird sichergestellt, dass nur autorisierte Benutzer auf die verschlüsselten Daten zugreifen können.
+
+== USB-Stick mit BitLocker verschlüsseln
+
+=== IT-Sicherheitsrichtlinie Recplast GmbH
+
+NOTE: Bitte beachten Sie die IT-Sicherheitsrichtlinie Recplast GmbH.
+
+Ziel der IT-Sicherheitsrichtlinie Recplast GmbH ist es, Sie als Mitarbeiterin der Recplast GmbH für (fiktive Beispielfirma BSI) für das Thema Sicherheit in der Informationstechnologie (IT) zu sensibilisieren und die störungsfreie und sichere Nutzung der IT-Infrastruktur zu gewährleisten. 
+
+<<<<
+
+Ohne Telefon- und E-Mail-Verbindung sind wir für Jugendämter, Vormünder, Eltern und Angehörige nicht erreichbar; ohne eine Online-Verbindung lassen sich gesetzliche Pflichten wie z.B. die Umsatzsteueranmeldung nicht mehr erfüllen. 
+
+Ein Ausfall nur eines Teils der IT-Anlagen oder ein fahrlässiges Handeln würde neben Image-Schäden auch massive finanzielle Einbußen – bis hin zur Existenzgefährdung – mit sich bringen.
+
+
+WARNING: Stecken Sie *niemals einen fremden USB-Stick*, dessen Eigentümer Sie nicht persönlich kennen, in einen Recplast-Computer. Dieser kann sehr schädliche Software enthalten!
+
+=== Schnelle Zusammenfassung
+* [ ] leeren oder unverschlüsselten USB-Stick in den Computer stecken.
+* [ ] BitLocker in der Windows-Suche aufrufen und starten
+* [ ] Im BitlLocker-Fenster den USB-Stick auswählen
+* [ ] Ein Kennwort eingeben
+* [ ] Wiederherstellungsschlüssel ausdrucken als PDF
+* [ ] USB-Stick verschlüsseln
+* [ ] USB-Stick sicher auswerfen
+
+<<<<
+
+=== BitLocker starten
+.BitLocker mit Windows-Suche starten
+image::BitlockerSuchen.png[75%,75%,role="related thumb center"]
+
+Im Suchfeld rechts vom Windows-Symbol »bitlocker« eingegeben und »BitLocker verwalten« anklicken. 
+
+BitLocker wird gestartet und es erscheint das folgende  Fenster (siehe Abb. 2)
+
+
+.BitLocker – Startbildschirm
+// image::BitlockerStartScreen.png[]
+image::BitlockerStickWaehlen.png[role="related thumb center"]
+
+Unten auf den gewünschten Stick klicken; ein weiteres Fenster öffnet sich. Bei »Methode zum Entsperren des  Laufwerks auswählen« (Abb. 3) »Kennwort« anklicken und dort das Häkchen setzen.
+
+=== Kennworteingabe
+.Häkchen bei __Kennwort zum Entsperren des Laufwerks auswählen__ setzen
+image::BitlockerMethode.png[role="related thumb center"]
+
+Nun das gewünschte Passwort zweimal eingeben.
+
+.Passwort-Eingabe
+image::BitlockerPasswort.png[75%,75%,role="related thumb center"]
+
+Anschließend auf *Weiter* klicken.
+
+<<<
+  
+=== Wiederherstellungsschlüssel speichern
+
+Der Wiederherstellungsschlüssel bei BitLocker ist ein spezieller Schlüssel, der zur Wiederherstellung des Zugriffs auf eine verschlüsselte Festplatte oder USB-Stick verwendet wird, falls das Hauptkennwort verloren geht oder nicht verfügbar ist. Der Wiederherstellungsschlüssel dient als eine Art "Rettungsmechanismus", um den Zugriff auf die verschlüsselten Daten wiederherzustellen.
+
+Für USB-Sticks ist es völlig ausreichend, den Wiederherstellungsschlüssel auszudrucken. Dazu wird der Wiederherstellungsschlüssel in einem PDF auf der Festplatte des Notebooks gespeichert.
+
+.Wiederherstellungsschlüssel für USB-Stick sichern
+image::BitlockerSicherheitsschluessel01.png[75%,75%,role="related thumb center"]
+
+Auf *Wiederherstellungsschlüssel drucken* klicken. Als Drucker *Microsoft Print to PDF* auswählen und anschließend auf *Drucken* klicken.
+
+.Wiederherstellungsschlüssel als PDF drucken
+image::BitlockerPDFdrucken.png[75%,75%,role="related thumb center"]
+
+Es öffnet sich ein weiteres Fenster: Hier den Schlüssel als PDF im Verzeichnis _Dokumente_ mit einem aussagekräftigen Namen wie z.B. _Stick-Forsthaus-02_ speichern.
+
+.Wiederherstellungsschlüssel als PDF im Verzeichnis _Dokumente_ speichern
+image::BitlockerPDFspeichern.png[75%,75%,role="related thumb center"]
+
+Anschließend auf *Weiter* klicken.
+
+=== Verschlüsselung starten
+Nun im nächsten Fenster »Nur verwendeten Speicherplatz verwenden…« auswählen und im nächsten Schritt »Kompatiblen Modus…» auswählen.
+
+.»Nur verwendeten Speicherplatz verwenden…« auswählen
+image::BitlockerVerschluesselung01.png[75%,75%,role="related thumb center"]
+
+Anschließend auf *Weiter* klicken.
+
+.»Kompatiblen Modus…» auswählen
+image::BitlockerVerschluesselung02.png[75%,75%,role="related thumb center"]
+
+Anschließend auf *Weiter* klicken.
+
+Jetzt kann die Verschlüsselung gestartet werden.
+
+.Verschlüsselung starten
+image::BitlockerVerschluesselung03.png[75%,75%,role="related thumb center"]
+
+{nbsp} +
+{nbsp} +
+
+[.float-group]
+--
+// [.left]
+.Fortschrittsanzeige
+image::BitlockerVerschluesselung04.png[role="related thumb center"]
+
+// [.right]
+.Fertig
+image::BitlockerVerschluesselung05.png[role="related thumb center"]
+--
+
+[.left]
+*Nun noch den USB-Stick sicher auswerfen.*
+
+
+[role="left"]
+== USB-Stick sicher auswerfen. 
+
+
+NOTE: Das sichere Auswerfen eines USB-Sticks unter Windows ist wichtig, um sicherzustellen, dass alle Schreibvorgänge abgeschlossen sind und keine Datenverluste oder Beschädigungen auf dem USB-Stick auftreten. 
+
+Hier sind die Gründe, warum das sichere Auswerfen empfohlen wird:
+
+1. Datenintegrität: Beim Schreiben von Daten auf einen USB-Stick puffert das Betriebssystem die Informationen zunächst im Arbeitsspeicher, bevor sie tatsächlich auf den Speicher des USB-Sticks geschrieben werden. Durch das sichere Auswerfen wird sichergestellt, dass alle Daten aus dem Puffer auf den USB-Stick übertragen wurden und keine beschädigten oder unvollständigen Dateien auf dem Laufwerk zurückbleiben.
+
+2. Dateisystem-Cache: Das Betriebssystem verwendet einen Dateisystem-Cache, um den Schreibvorgang auf dem USB-Stick zu optimieren. Beim sicheren Auswerfen werden alle im Cache befindlichen Daten auf den USB-Stick geschrieben, um sicherzustellen, dass alle Änderungen korrekt gespeichert wurden. Wenn der USB-Stick einfach entfernt wird, ohne ihn sicher auszuwerfen, können Datenverluste oder beschädigte Dateien auftreten, da möglicherweise nicht alle Informationen aus dem Cache geschrieben wurden.
+
+3. Laufwerksschutz: Das sichere Auswerfen des USB-Sticks ermöglicht auch den Schutz vor versehentlicher Beschädigung des Dateisystems oder des Laufwerks selbst. Beispielsweise können laufende Prozesse auf den USB-Stick zugreifen und Daten lesen oder schreiben. Durch das sichere Auswerfen werden alle diese Prozesse beendet und das Laufwerk wird in einen sicheren Zustand versetzt, bevor es entfernt wird.
+
+In der Taskleiste ganz rechts auf das 
+
+image::TaskleisteMenu.png[role="related thumb center"] 
+Symbol klicken. 
+
+Dann auf das Symbol *USB-Stick*. Nun auf _Name des USB-Sticks_ *auswerfen* klicken.
+
+.USB-Stick auswerfen
+image::USB-StickAuswerfen01.png[role="related thumb center"]
+
+{nbsp} +
+{nbsp} +
+
+WARNING: Erst wenn der folgende Bildschirm erscheint, den USB-Stick antfernen.
+
+.Hardware kann jetzt entfernt werden.
+image::USB-StickAuswerfen02.png[role="related thumb center"]
+
+{nbsp} +
+
+icon:check[] Fertig!
+
+// end::main[]
+<<<
+
+[cols="2,5,3", options="header"]
+.Dokumentenmanagement
+|===
+|Dok.-Nr.
+|Dokument
+|Anmerkung
+
+
+|90-10
+|IT-Sicherheitsrichtlinie
+|
+
+|90-11
+|IT-Sicherheitsmanagement
+|
+
+|40-01
+|Verpflichtungserklärung Vertraulichkeit Mitarbeitende
+|
+
+|90-41
+|Anleitung Bitlocker USB-Stick
+|dieses Dokument
+|===
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+[.text-right]
+[.small]#Version: {revnumber} Dokument »{revremark}« vom {revdate} | Status: {docstatus}#
+
+// icon:times[]
+
+// icon:check[]
+
+// icon:file[]
+
+// icon:question-circle[]
+
+// icon:exclamation-triangle[]
+
+// icon:list-ol[]
+
+// icon:list-ul[]
+
+// icon:comment[]
+
+// icon:pencil[]
+
+// icon:folder-open[]
+
+// icon:exclamation-circle[]
+
+// icon:link[]
+
+// icon:users[]
+
+// icon:hourglass-start[]
+
+// icon:hourglass-end[]
+
+// icon:question[]
+
+// icon:chain-broken[]
+
+// icon:[]
+
+// icon:[]
+
+// icon:[]
+
+// icon:[]
+
+// icon:[]

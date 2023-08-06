@@ -1,0 +1,158 @@
+' @startuml
+' 'Adapted from https://github.com/Crashedmind/PlantUML-opensecurityarchitecture-icons/blob/master/all. 
+' scale .5
+' !include <osa/arrow/green/left/left.puml>
+' !include <osa/arrow/yellow/right/right.puml>
+' !include <osa/awareness/awareness.puml>
+' !include <osa/contract/contract.puml>
+' !include <osa/database/database.puml>
+' !include <osa/desktop/desktop.puml>
+' !include <osa/desktop/imac/imac.puml>
+' !include <osa/device_music/device_music.puml>
+' !include <osa/device_scanner/device_scanner.puml>
+' !include <osa/device_usb/device_usb.puml>
+' !include <osa/device_wireless_router/device_wireless_router.puml>
+' !include <osa/disposal/disposal.puml>
+' !include <osa/drive_optical/drive_optical.puml>
+' !include <osa/firewall/firewall.puml>
+' !include <osa/hub/hub.puml>
+' !include <osa/ics/drive/drive.puml>
+' !include <osa/ics/plc/plc.puml>
+' !include <osa/ics/thermometer/thermometer.puml>
+' !include <osa/id/card/card.puml>
+' !include <osa/laptop/laptop.puml>
+' !include <osa/lifecycle/lifecycle.puml>
+' !include <osa/lightning/lightning.puml>
+' !include <osa/media_flash/media_flash.puml>
+' !include <osa/media_optical/media_optical.puml>
+' !include <osa/media_tape/media_tape.puml>
+' !include <osa/mobile/pda/pda.puml>
+' !include <osa/padlock/padlock.puml>
+' !include <osa/printer/printer.puml>
+' !include <osa/site_branch/site_branch.puml>
+' !include <osa/site_factory/site_factory.puml>
+' !include <osa/vpn/vpn.puml>
+' !include <osa/wireless/network/network.puml>
+' rectangle "OSA" {
+' rectangle "Left: <$left>"
+' rectangle "Right: <$right>"
+' rectangle "Awareness: <$awareness>"
+' rectangle "Contract: <$contract>"
+' rectangle "Database: <$database>"
+' rectangle "Desktop: <$desktop>"
+' rectangle "Imac: <$imac>"
+' rectangle "Device_music: <$device_music>"
+' rectangle "Device_scanner: <$device_scanner>"
+' rectangle "Device_usb: <$device_usb>"
+' rectangle "Device_wireless_router: <$device_wireless_router>"
+' rectangle "Disposal: <$disposal>"
+' rectangle "Drive_optical: <$drive_optical>"
+' rectangle "Firewall: <$firewall>"
+' rectangle "Hub: <$hub>"
+' rectangle "Drive: <$drive>"
+' rectangle "Plc: <$plc>"
+' rectangle "Thermometer: <$thermometer>"
+' rectangle "Card: <$card>"
+' rectangle "Laptop: <$laptop>"
+' rectangle "Lifecycle: <$lifecycle>"
+' rectangle "Lightning: <$lightning>"
+' rectangle "Media_flash: <$media_flash>"
+' rectangle "Media_optical: <$media_optical>"
+' rectangle "Media_tape: <$media_tape>"
+' rectangle "Pda: <$pda>"
+' rectangle "Padlock: <$padlock>"
+' rectangle "Printer: <$printer>"
+' rectangle "Site_branch: <$site_branch>"
+' rectangle "Site_factory: <$site_factory>"
+' rectangle "Vpn: <$vpn>"
+' rectangle "Network: <$network>"
+' }
+' @enduml
+
+@startuml
+hide stereotype
+!define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
+!include osaPuml/Common.puml
+!include osaPuml/User/all.puml
+!include osaPuml/Hardware/all.puml
+!include osaPuml/Misc/all.puml
+!include osaPuml/Server/all.puml
+!include osaPuml/Site/all.puml
+!include  <C4/C4_Context.puml>
+!include <office/Users/user.puml>
+!theme materia-outline
+skinparam BackgroundColor #ffffff
+' LAYOUT_WITH_LEGEND()
+title Netzwerk Geschäftstelle Musterort 
+
+' Users
+together {
+osa_user_blue(gl, "GL",  "Geschäftsführung", "Einrichtungsleitung" )
+osa_user_green_business_manager(pf, "PF", "Verwaltung", "Personal / Finanzen")
+}
+' Network
+osa_device_wireless_router(wifiAP, "10.10.100.1", "Router", "Musterort ")
+note right #orange : NO open ports
+
+together {
+osa_user_green_operations(admin, "Admin", "Verwaltung", "ISB / DSB")
+osa_user_blue(sb1, "SB-1",  "Verwaltung", "stellv. Leitung" )
+osa_user_blue(sb2, "SB-2", "Verwaltung", "Personal, QM" )
+}
+' osa_user_blue(sb, "N.N.",  "Verwaltung", "Sachbearbeitung" )
+
+' Devices
+' osa_desktop(pc1, "Dynamic IP", "Windows 10", "ThinkCentre")
+' osa_desktop(pc2, "Dynamic IP", "Windows 10", "ThinkCentre")
+' osa_desktop(pc3, "Dynamic IP", "Windows 10", "ThinkCentre")
+' osa_desktop(pc4, "Dynamic IP", "Windows 10", "ThinkCentre")
+' osa_laptop(mac, "Dynamic IP", "Mac", "Mac")
+
+
+together {
+osa_server(proxmox, "10.10.100.10", "Promox Server", "virtualization platform ")
+osa_server_file(server, "10.10.100.x", "LXC 10x", "Debian 11, Samba File Server")
+osa_server_directory(bookstack, "10.10.100.y", "LXC 10y (BookStack)", "internes Wiki")
+}
+
+together {
+osa_server_database(truenas, "10.10.100.z", "Mini PC – Truenas Server", "Backup-Server")
+osa_server_monitor(uptime, "10.10.100.63:3001", "Uptime Kuma", "Server Monitoring")
+osa_cloud(cloud, "extRZ", "RZ bei Stadt","Web-Server")
+}
+
+
+
+' osa_hub(hub, "Office hub", "Hub")
+' osa_firewall(firewall, "51.37.24.103", "Network")
+
+' Netzwerk
+proxmox --> server: Fileserver (LXC)
+proxmox --> bookstack: internes Wiki (LXC)
+sb1 --> server: buero, personal, leitung, archiv
+sb2 --> server: buero, personal
+' sb --> server: buero
+admin --> server: Server Admin
+
+
+proxmox --> truenas: Backup Proxmox und LXC
+server --> truenas: Backup Proxmox und LXC
+bookstack --> truenas: Backup Proxmox und LXC
+uptime --> proxmox: per ping
+server --> cloud: <size:14>tägl. Sicherung der Ordner und Dateien mit RCLONE</size>
+
+gl --> wifiAP: via WireGuard VPN
+admin --> wifiAP: via WireGuard VPN
+pf --> wifiAP: <color:purple><size:18>In Planung</size></color>
+wifiAP --> server: buero, personal, leitung
+
+' legend
+'     |= Color |= Type |= Description |
+'     | <size:11><back:#Red>Mary           </back></size>|    <color:Red><$osa_user_green_developer*.4></color> | Mary details... This is a stdlib sprite |
+'     | <size:11><back:#DarkGreen>Ivan           </back></size>|    <color:DarkGreen><$osa_user_green_operations*.4></color> | Ivan details... |
+'     | <size:11><back:#Orange>Bob           </back></size>|    <color:Orange><$osa_user_green_business_manager*.4></color> | Bob details... |
+'     | <size:11><back:#Purple>Box           </back></size>|    <color:Purple><&box></color> | A Box. This is an openiconic sprite |
+' endlegend
+
+footer %filename() rendered with PlantUML version %version()
+@enduml

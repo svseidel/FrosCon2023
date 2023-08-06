@@ -1,0 +1,120 @@
+= IT-Infrastruktur Filialen
+:asciidoc-version: 2.0.20 [https://asciidoctor.org]
+:author: RMF 
+:email: it-support@rmf.berlin
+:author: RMF 
+:source-highlighter: rouge
+:lang: de
+:icons: font
+:doctype: article
+:docstatus: In Bearbeitung
+// :docstatus: Aktiv
+// :docstatus: Archiviert (inaktiv)
+:docstatus: adoc-Vorlage
+:asciidoc-file: 90-01b-IT-InfrastrukturBuero.adoc
+:docdate: 28.03.2023
+:revnumber: 0.1
+:revdate: 28.03.2023
+:revremark: Initial
+:last-update-label: zuletzt geändert: 
+:table-caption: Tabelle
+:toc-title: Inhalt
+:toc:
+:toclevels: 3
+ 
+// übersetzen mit
+// asciidoctor-pdf -a pdf-themesdir=/Users/webmaster/Documents/asciidoc/resources/themes -a pdf-theme=isb -a pdf-fontsdir=/Users/webmaster/Documents/asciidoc/resources/fonts 90-01b-IT-InfrastrukturBuero.adoc
+
+
+// TODO: Hardware-Liste Filialen ausfüllen
+== IT-Infrastruktur Filialen
+// tag::main[]
+
+=== Musterort
+
+[cols="2,3,2,3", options="header"]
+.IT-Infrastruktur Filialen
+
+
+|===
+|Ort 
+| Hardware 
+| IP-Adresse 
+| Anmerkung 
+
+||||
+
+
+|===
+=== Musterort
+[cols="2,3,2,3", options="header"]
+.IT-Infrastruktur Filialen
+
+
+|===
+|Ort 
+|Hardware 
+|IP-Adresse 
+|Anmerkung 
+
+||||
+
+|===
+
+// end::main[]
+
+
+[cols="2,5,3", options="header"]
+.Dokumentenmanagement
+|===
+|Nr.
+|Anlage bzw. Verweis auf weitere Dokumente
+|Dok.-Nr./Anmerkung
+
+|
+|
+|
+
+|===
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+[.text-right]
+[.small]#Version: {revnumber} ({revremark}) vom {revdate} | Status: {docstatus}#
+
+icon:times[]
+
+icon:check[]
+
+icon:file[]
+
+icon:question-circle[]
+
+icon:exclamation-triangle[]
+
+icon:list-ol[]
+
+icon:list-ul[]
+
+icon:comment[]
+
+icon:pencil[]
+
+icon:folder-open[]
+
+icon:exclamation-circle[]
+
+icon:link[]
+
+icon:users[]
+
+icon:hourglass-start[]
+
+icon:hourglass-end[]
+
+icon:question[]
+
+icon:chain-broken[]
+

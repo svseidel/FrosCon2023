@@ -1,0 +1,56 @@
+// tag::main[]
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "AsciiDocSlide",
+      "type": "shell",
+      "command": "npx asciidoctor-revealjs ${file} && open ${relativeFileDirname}/${fileBasenameNoExtension}.html",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "ascidoctor-pdf",
+      "type": "shell",
+      "command": "workbench.action.files.save",
+      "type": "shell",
+      "command": "asciidoctor-pdf -a pdf-themesdir=/Users/webmaster/Documents/99_Vortrag/FrosCon2023/ressources/themes/ -a pdf-theme=froscon -a pdf-fontsdir=/Users/webmaster/Documents/99_Vortrag/FrosCon2023/ressources/fonts/ ${file} && open ${relativeFileDirname}/${fileBasenameNoExtension}.pdf",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    // end::main[]
+    {
+      "label": "ascidoc2Word",
+      "type": "shell",
+      "command": "workbench.action.files.save",
+      "type": "shell",
+      "command": "asciidoctor -b docbook ${file} && pandoc -r docbook -t docx -o ${relativeFileDirname}/${fileBasenameNoExtension}.docx ${relativeFileDirname}/${fileBasenameNoExtension}.xml",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "ascidoc2md",
+      "type": "shell",
+      "command": "workbench.action.files.save",
+      "type": "shell",
+      "command": "asciidoctor -b docbook ${file} && pandoc -f docbook -t markdown_strict ${relativeFileDirname}/${fileBasenameNoExtension}.xml -o ${relativeFileDirname}/${fileBasenameNoExtension}.md",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
+// end::main[]
